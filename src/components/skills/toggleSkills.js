@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import SkillRating from './skillRating';
 import ArtList from './artList';
+import { RiTeamLine } from 'react-icons/ri';
+import { BsBrush } from 'react-icons/bs';
+import { FaCode } from 'react-icons/fa';
 
 const ToggleSkills = () => {
   const [selectedSection, setSelectedSection] = useState(null);

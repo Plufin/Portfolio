@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import Global from '../components/global';
+import NavBar from '../components/NavBar';
 import styled from 'styled-components';
-import Global from '../components/global.js';
+import { MdOutlineEmail } from 'react-icons/md';
+import { CiLinkedin } from 'react-icons/ci';
+import { AiFillGithub } from 'react-icons/ai';
 
 function Home() {
   const studentRoles = [
@@ -22,6 +26,7 @@ function Home() {
   return (
     <div className="base">
       <Global />
+      <NavBar />
       <Main>
         <Content>
           <Intro>
@@ -33,8 +38,20 @@ function Home() {
               <SlidingText>{studentRoles[currentStudentIndex]}</SlidingText>
             </Student>
             <Contact>
+              <IconContainer>
+                <MdOutlineEmail />
+              </IconContainer>
+              <IconContainer>
+                <CiLinkedin />
+              </IconContainer>
+              <IconContainer>
+                <AiFillGithub />
+              </IconContainer>
             </Contact>
           </Intro>
+          <Picture>
+            <Profile src={require('../components/Resources/profile.png')} alt="Profile" />
+          </Picture>
         </Content>
       </Main>
     </div>
