@@ -1,38 +1,77 @@
-import React from 'react';
+import Global from '../components/global';
 import styled from 'styled-components';
-import Global from '../components/global.js';
+import { MdOutlineEmail } from 'react-icons/md';
+import { CiLinkedin } from 'react-icons/ci';
+import { AiFillGithub } from 'react-icons/ai';
 
-const Contact = () => {
+function Contact() {
   return (
-    <Container>
+    <div className="base">
       <Global />
-      <ContactTitle>Contact Me</ContactTitle>
-      <ContactInfo>
-        <p>Email: example@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 Main Street, Cityville, State, 12345</p>
-      </ContactInfo>
-    </Container>
+      <Content>
+        <Title>
+          <h2>GET IN TOUCH</h2>
+        </Title>
+        <p>Pellentesque tortor augue, euismod in hendrerit interdum, tempor non sem. Fusce varius ut mi ut tristique. Aliquam ac ornare metus. Sed odio purus, fringilla eget lorem vitae, convallis aliquet neque. </p>
+        <Info>
+          <InfoItem>
+            <IconContainer>
+              <MdOutlineEmail />
+            </IconContainer>
+            <p>Email</p>
+          </InfoItem>
+          <InfoItem>
+            <IconContainer>
+              <CiLinkedin />
+            </IconContainer>
+            <p>LinkedIn</p>
+          </InfoItem>
+          <InfoItem>
+            <IconContainer>
+              <AiFillGithub />
+            </IconContainer>
+            <p>GitHub</p>
+          </InfoItem>
+        </Info>
+      </Content>
+    </div>
   );
-};
+}
 
-const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+const Content = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-right: 40%;
+  padding-top: 100px;
 `;
 
-const ContactTitle = styled.h2`
-  text-align: center;
-  margin-bottom: 20px;
+
+const Title = styled.div`
+  border-bottom: 1px solid #FCD864;
+  min-width: 150px;
+  max-width: 350px;
+  margin-bottom: 40px;
 `;
 
-const ContactInfo = styled.div`
-  line-height: 1.6;
+const Info = styled.div`
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 
-  p {
-    margin-bottom: 15px;
-  }
+const InfoItem = styled.div`
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+`;
+
+const IconContainer = styled.span`
+  color: #E2EFF2;
+  margin-right: 20px;
+  font-size: 40px;
 `;
 
 export default Contact;

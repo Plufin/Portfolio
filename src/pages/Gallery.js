@@ -1,53 +1,59 @@
-import React from 'react';
+import Global from '../components/global';
 import styled from 'styled-components';
-import Global from '../components/global.js';
 
-// Assuming you have an array of image URLs
-const imageUrls = [
-  'https://example.com/image1.jpg',
-  'https://example.com/image2.jpg',
-  'https://example.com/image3.jpg',
-  // Add more image URLs as needed
-];
 
-const Gallery = () => {
+function Gallery() {
   return (
-    <Container>
+    <div className="base">
       <Global />
-      <GalleryTitle>My Gallery</GalleryTitle>
-      <ImageGrid>
-        {imageUrls.map((imageUrl, index) => (
-          <Image key={index} src={imageUrl} alt={`Image ${index + 1}`} />
-        ))}
-      </ImageGrid>
-    </Container>
+      <Main>
+        <All>
+          <h2>ALL</h2>
+        </All>
+        <Filter>
+          <h2>COMISSION</h2>
+          <h2>DIGITAL</h2>
+          <h2>TRADITIONAL</h2>
+          <h2>WEB DESIGN</h2>
+          <h2>TATTOO</h2>
+        </Filter>
+        <Media>
+          <h2>Gallery</h2>
+        </Media>
+      </Main>
+    </div>
   );
-};
+}
 
-const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+const Main = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;
 
-const GalleryTitle = styled.h2`
-  text-align: center;
-  margin-bottom: 20px;
+const All = styled.div`
+background - color: #47358c40;
 `;
 
-const ImageGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+const Filter = styled.div`
+flex: 1;
+display: flex;
+flex - direction: row;
+align - items: center;
+justify - content: baseline;
+background - color: #47358c40;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  cursor: pointer;
-
-  /* Add additional styles as needed */
+const Media = styled.div`
+flex: 1;
+display: flex;
+flex - direction: row;
+align - items: center;
+background- color: #47358c40;
 `;
 
 export default Gallery;
