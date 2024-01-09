@@ -12,19 +12,17 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <BrowserRouter>
-      <div className="wrapper">'
-        <nav>
-          <NavBar />
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/gallery" element={<Gallery />} />
-        </Routes>
-      </div>
+      <nav>
+        <NavBar />
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
     </BrowserRouter>
   );
 }

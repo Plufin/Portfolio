@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Global from '../components/global';
-import NavBar from '../components/NavBar';
 import styled from 'styled-components';
 import { MdOutlineEmail } from 'react-icons/md';
 import { CiLinkedin } from 'react-icons/ci';
@@ -18,7 +17,7 @@ function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentStudentIndex((prevIndex) => (prevIndex + 1) % studentRoles.length);
-    }, 6000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -31,19 +30,19 @@ function Home() {
           <Intro>
             <Title>
               <h1>Paula</h1>
-              <h1 style={{ color: '#FCD864', marginBottom: '30px' }}>Ervasti</h1>
+              <h1 style={{ color: '#FCD864' }}>Ervasti</h1>
             </Title>
             <Student>
               <SlidingText>{studentRoles[currentStudentIndex]}</SlidingText>
             </Student>
             <Contact>
-              <IconContainer>
+              <IconContainer href="mailto:ervastipaula@gmail.com">
                 <MdOutlineEmail />
               </IconContainer>
-              <IconContainer>
+              <IconContainer href="https://www.linkedin.com/in/paula-ervasti-23b268258/">
                 <CiLinkedin />
               </IconContainer>
-              <IconContainer>
+              <IconContainer href="https://github.com/your-username">
                 <AiFillGithub />
               </IconContainer>
             </Contact>
@@ -62,12 +61,14 @@ const Main = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  padding-bottom: 100px;
 `;
 
 const Content = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: flex-start;
   background-color: #47358c40;
   height: 500px;
@@ -77,9 +78,9 @@ const Intro = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding-left: 60px;
-  max-width: 900px;
+  height: 100%;
+  max-width: 550px;
   min-width: 350px;
 `;
 
@@ -100,19 +101,34 @@ const Contact = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding-bottom: 20px;
 `;
 
 const IconContainer = styled.span`
 color: #E2EFF2;
   margin-right: 10px;
   font-size: 40px;
+
+  &:hover {
+    color: #BDAEFF;
+    cursor: pointer;
+  }
 `;
 
 const Title = styled.div`
+padding-top: 25px;
+flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+
+  h1 {
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 const Student = styled.div`
@@ -123,9 +139,9 @@ const Student = styled.div`
 
 const SlidingText = styled.h2`
   overflow: hidden;
-  animation: bounce 6s infinite;
+  animation: bounce 5s infinite;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 
   @keyframes bounce {
     0%, 25% {

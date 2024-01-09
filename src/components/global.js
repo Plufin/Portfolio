@@ -13,8 +13,6 @@ const themeDark = {
 const GlobalStyle = createGlobalStyle`
   body {
     background: #18171C;
-    margin: 0;
-    padding: 0;
     margin-bottom: 100px;
   }
 
