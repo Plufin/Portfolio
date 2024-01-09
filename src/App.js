@@ -1,27 +1,24 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-
-import Manatee from './pages/Manatee/Manatee';
-import Narwhal from './pages/Narwhal/Narwhal';
 import Home from './pages/Home';
+import About from './pages/About';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="wrapper">
-        <h1>Marine Mammals</h1>
-        <nav>
-          <ul>
-            <li><Link to="/manatee">Manatee</Link></li>
-            <li><Link to="/narwhal">Narwhal</Link></li>
-            <li><Link to="/">Home</Link></li>
-          </ul>
-        </nav>
+      <div className="wrapper">'
         <Routes>
-          <Route path="/manatee" element={<Manatee />} />
-          <Route path="/narwhal" element={<Narwhal />} />
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>
     </BrowserRouter>

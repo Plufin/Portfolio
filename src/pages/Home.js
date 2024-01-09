@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Global from '../components/global.js';
 
 function Home() {
   const studentRoles = [
@@ -20,6 +21,7 @@ function Home() {
 
   return (
     <div className="base">
+      <Global />
       <Main>
         <Content>
           <Intro>
