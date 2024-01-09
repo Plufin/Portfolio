@@ -4,6 +4,7 @@ import './App.css';
 
 import Manatee from './pages/Manatee/Manatee';
 import Narwhal from './pages/Narwhal/Narwhal';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
           <ul>
             <li><Link to="/manatee">Manatee</Link></li>
             <li><Link to="/narwhal">Narwhal</Link></li>
+            <li><Link to="/">Home</Link></li>
           </ul>
         </nav>
         <Routes>
           <Route path="/manatee" element={<Manatee />} />
           <Route path="/narwhal" element={<Narwhal />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>

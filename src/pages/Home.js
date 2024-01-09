@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
+import { MdOutlineEmail } from 'react-icons/md';
+import { CiLinkedin } from 'react-icons/ci';
+import { AiFillGithub } from 'react-icons/ai';
 
 function Home() {
   const studentRoles = [
@@ -32,9 +34,20 @@ function Home() {
               <SlidingText>{studentRoles[currentStudentIndex]}</SlidingText>
             </Student>
             <Contact>
-              <p>Home</p>
+              <IconContainer>
+                <MdOutlineEmail />
+              </IconContainer>
+              <IconContainer>
+                <CiLinkedin />
+              </IconContainer>
+              <IconContainer>
+                <AiFillGithub />
+              </IconContainer>
             </Contact>
           </Intro>
+          <Picture>
+            <Profile src={require('../components/Resources/profile.png')} alt="Profile" />
+          </Picture>
         </Content>
       </Main>
     </div>
@@ -84,6 +97,12 @@ const Contact = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+`;
+
+const IconContainer = styled.span`
+color: #E2EFF2;
+  margin-right: 10px;
+  font-size: 40px;
 `;
 
 const Title = styled.div`
