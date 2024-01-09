@@ -19,16 +19,19 @@ const ToggleSkills = () => {
         <ToggleButton onClick={() => handleToggle('art')} selected={selectedSection === 'art'}>
           <p className={selectedSection === 'art' ? 'selected' : ''}>ART</p>
           <IconContainer selected={selectedSection === 'art'}>
+            <BsBrush />
           </IconContainer>
         </ToggleButton>
         <ToggleButton onClick={() => handleToggle('code')} selected={selectedSection === 'code'}>
           <p className={selectedSection === 'code' ? 'selected' : ''}>CODE</p>
           <IconContainer selected={selectedSection === 'code'}>
+            <FaCode />
           </IconContainer>
         </ToggleButton>
         <ToggleButton onClick={() => handleToggle('teamwork')} selected={selectedSection === 'teamwork'}>
           <p className={selectedSection === 'teamwork' ? 'selected' : ''}>TEAMWORK</p>
           <IconContainer selected={selectedSection === 'teamwork'}>
+            <RiTeamLine />
           </IconContainer>
         </ToggleButton>
       </ButtonContainer>
