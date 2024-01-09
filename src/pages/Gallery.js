@@ -25,9 +25,9 @@ function Gallery() {
     <div className="base">
       <Global />
       <Main>
-        <All>
+        {        /*<All>
           <h2 onClick={() => setSelectedFilters([])}>ALL</h2>
-        </All>
+        </All>*/}
         <Filter>
           {['COMMISSION', 'DIGITAL', 'TRADITIONAL', 'WEB DESIGN', 'TATTOO'].map((filter) => (
             <h2
@@ -40,7 +40,6 @@ function Gallery() {
           ))}
         </Filter>
         <Media>
-          <h2>Gallery</h2>
           <GalleryList filterImages={filterImages} />
         </Media>
       </Main>
@@ -52,32 +51,41 @@ const Main = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-`;
-
-const All = styled.div`
-background - color: #47358c40;
 `;
 
 const Filter = styled.div`
+max-height: 100px;
   flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #47358c40;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
 
   h2 {
+    color: #E2EFF2;
+    background-color: #47358c40;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    padding: 10px; /* Add padding for better clickability */
-    border: 2px solid transparent; /* Add border for clearer distinction */
-    transition: border 0.3s ease; /* Add transition for smooth visual feedback */
+    padding: 10px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+    
+
+    &:hover {
+      background-color: #47358C80;
+    }
 
     &.selected {
-      border-color: #fff; /* Change border color for selected filters */
+      border-color: #BDAEFF;
+    }
+
+    @media (max-width: 1100px) {
+      font-size: 22px;
     }
   }
 `;
@@ -85,9 +93,11 @@ const Filter = styled.div`
 const Media = styled.div`
 flex: 1;
 display: flex;
-flex - direction: row;
-align - items: center;
-background- color: #47358c40;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+margin-top: 20px;
+padding: 20px;
 `;
 
 export default Gallery;

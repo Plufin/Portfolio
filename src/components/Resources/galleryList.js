@@ -18,18 +18,28 @@ const Gallery = ({ src, alt, tags, filterImages }) => (
 );
 
 const StyledImage = styled.img`
+height: 400px;
+width: 400px;
+object-fit: cover;
   max-width: 100%;
-  height: 230px;
+  border-radius: 8px;
   object-fit: cover;
+  margin: 10px;
+
+  @media (max-width: 1100px) {
+    height: 300px;
+width: 300px;
+  }
 `;
 
 const MiniGallery = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  padding-bottom: 30px;
+flex-wrap: wrap;
+align-items: flex-start;
 `;
 
 
