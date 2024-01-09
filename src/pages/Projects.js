@@ -1,78 +1,121 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import Global from '../components/global';
+import NavBar from '../components/NavBar';
 import styled from 'styled-components';
-import Global from '../components/global.js';
 
-// Assuming you have an array of project details
-const projects = [
-  {
-    title: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    link: 'https://example.com/project1',
-  },
-  {
-    title: 'Project 2',
-    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    link: 'https://example.com/project2',
-  },
-  // Add more projects as needed
-];
-
-const Projects = () => {
+function Projects() {
   return (
-    <Container>
+    <div className="base">
       <Global />
-      <ProjectsTitle>My Projects</ProjectsTitle>
-      <ProjectsList>
-        {projects.map((project, index) => (
-          <ProjectItem key={index}>
-            <ProjectTitle>{project.title}</ProjectTitle>
-            <ProjectDescription>{project.description}</ProjectDescription>
-            <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </ProjectLink>
-          </ProjectItem>
-        ))}
-      </ProjectsList>
-    </Container>
+      <Header>
+        <Title>
+          <h2>SELECTED DEV</h2>
+          <h2>& ART PROJECTS</h2>
+        </Title>
+      </Header>
+      <Content>
+        <Box>
+          <Left>
+            <Text>
+              <h2>TEXT 1</h2>
+              <p>Donec ac felis accumsan, ultrices augue sit amet, vestibulum sapien. Donec in est non dolor dignissim luctus sit amet at turpis. Aliquam lacinia, magna vitae accumsan ultricies, mauris velit fringilla felis, sed cursus nisi nisi sit amet turpis. Nulla convallis orci a tincidunt elementum. Sed posuere mattis laoreet. </p>
+            </Text>
+            <Thumbnail src={require('../components/Resources/hex.jpg')} alt="Hex" />
+
+          </Left>
+        </Box>
+        <Box>
+          <Right>
+
+            <Thumbnail src={require('../components/Resources/fish.jpg')} alt="Fish" />
+            <Text>
+              <h2>TEXT 2</h2>
+              <p>Ut laoreet est et massa posuere scelerisque. Cras dui velit, interdum a nulla eget, fringilla elementum risus. Nulla est lectus, cursus nec vestibulum a, porta id tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc fermentum at nibh id pharetra. Phasellus vitae tellus dui.</p>
+            </Text>
+          </Right>
+        </Box>
+      </Content>
+
+    </div>
   );
-};
+}
 
-const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+const Header = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-top: 100px;
+  max-height: 250px;
+  margin-bottom: 80px;
 `;
 
-const ProjectsTitle = styled.h2`
-  text-align: center;
-  margin-bottom: 20px;
+const Title = styled.div`
+  border-bottom: 1px solid #FCD864;
+  min-width: 150px;
+  max-width: 350px;
 `;
 
-const ProjectsList = styled.ul`
-  list-style: none;
-  padding: 0;
+const Content = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
-const ProjectItem = styled.li`
-  margin-bottom: 30px;
+const Box = styled.div`
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
 `;
 
-const ProjectTitle = styled.h3`
-  margin-bottom: 10px;
+const Right = styled.div`
+margin-left: 20%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Adjust padding as needed */
+  background: #47358C40;
+  height: 300px;
+  margin-bottom: 80px;
 `;
 
-const ProjectDescription = styled.p`
-  margin-bottom: 15px;
+const Left = styled.div`
+margin-right: 20%;
+  flex: 1;
+  display: flex;
+  flex-direction: row
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Adjust padding as needed */
+  background: #47358C40;
+  height: 300px;
 `;
 
-const ProjectLink = styled.a`
-  color: #007bff;
-  text-decoration: none;
-  cursor: pointer;
+const Thumbnail = styled.img`
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+`;
 
-  &:hover {
-    text-decoration: underline;
+const Text = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  h2 {
+    font-size: 30px;
+    font-family: Montserrat;
+    text-align: left;
+    color: #FCD864;
   }
-`;
+  `;
+
 
 export default Projects;
