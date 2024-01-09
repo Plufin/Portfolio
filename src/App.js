@@ -7,32 +7,14 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="wrapper">'
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="about">About</Link>
-            </li>
-            <li>
-              <Link to="skills">Skills</Link>
-            </li>
-            <li>
-              <Link to="projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="gallery">Gallery</Link>
-            </li>
-          </ul>
+          <NavBar />
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
