@@ -128,7 +128,7 @@ justify-content: center;
 `;
 
 const Thumbnail = styled.img`
-margin-right: 20px;
+margin: 20px;
 padding-top: 40px;
 z-index: 10;
   width: 100%;

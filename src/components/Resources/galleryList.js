@@ -5,9 +5,9 @@ const GalleryList = ({ filterImages }) => (
   <MiniGallery>
     <Gallery src={require('../Resources/cave.jpg')} alt="Cave" tags={['COMMISSION', 'DIGITAL']} filterImages={filterImages} />
     <Gallery src={require('../Resources/fish.jpg')} alt="Fish" tags={['DIGITAL']} filterImages={filterImages} />
-    <Gallery src={require('../Resources/fox.png')} alt="Fox" tags={['TATTOO', 'COMMISSION']} filterImages={filterImages} />
-    <Gallery src={require('../Resources/hex.jpg')} alt="Hex" tags={['COMMISSION', 'TRADITIONAL']} filterImages={filterImages} />
-    <Gallery src={require('../Resources/knot.jpg')} alt="Knot" tags={['WEB DESIGN']} filterImages={filterImages} />
+    <Gallery src={require('../Resources/Traditional/fox.png')} alt="Fox" tags={['TRADITIONAL', 'COMMISSION']} filterImages={filterImages} />
+    <Gallery src={require('../Resources/hex.jpg')} alt="Hex" tags={['COMMISSION', 'DIGITAL', 'TATTOO']} filterImages={filterImages} />
+    <Gallery src={require('../Resources/knot.jpg')} alt="Knot" tags={['DIGITAL']} filterImages={filterImages} />
   </MiniGallery>
 );
 
