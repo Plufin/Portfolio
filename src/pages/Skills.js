@@ -1,57 +1,38 @@
-import React from 'react';
+import Global from '../components/global';
 import styled from 'styled-components';
-import Global from '../components/global.js';
+import ToggleSkills from '../components/skills/toggleSkills';
 
-// Assuming you have an array of skills
-const skills = [
-  'JavaScript',
-  'React',
-  'Node.js',
-  'HTML',
-  'CSS',
-  'Styled Components',
-  // Add more skills as needed
-];
-
-const Skills = () => {
+function Skills() {
   return (
-    <Container>
+    <div className="base">
       <Global />
-      <SkillsTitle>My Skills</SkillsTitle>
-      <SkillsList>
-        {skills.map((skill, index) => (
-          <SkillItem key={index}>{skill}</SkillItem>
-        ))}
-      </SkillsList>
-    </Container>
+      <Content>
+        <Container>
+          <ToggleSkills />
+        </Container>
+      </Content>
+    </div>
   );
-};
+}
+
+const Content = styled.div`
+display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  align-content: center;
+  `;
 
 const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-`;
-
-const SkillsTitle = styled.h2`
-  text-align: center;
-  margin-bottom: 20px;
-`;
-
-const SkillsList = styled.ul`
-  list-style: none;
-  padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
+  flex-direction: column;
+  background-color: #47358c40;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 600px;
+  padding: 60px 60px 60px 60px;
+  `;
 
-const SkillItem = styled.li`
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 8px 16px;
-  margin: 8px;
-  border-radius: 5px;
-`;
 
 export default Skills;
