@@ -14,8 +14,8 @@ const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -23,13 +23,12 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-flex: 1;
-justify-content: center;
-align-items: center;
-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.8);
+  flex: 1;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
-  max-width: 70%;
-  width: 100%;
+  max-height: 3000px;
+  max-width: 1000px;
+  overflow: auto;
 `;
 
 const CloseButton = styled.span`
