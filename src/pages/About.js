@@ -14,11 +14,11 @@ function About() {
       </Header>
       <Content>
         <Box>
-          <Right>
+          <Right style={{ marginTop: '90px' }}>
             <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
             <Text>
-              <h2>TEXT 1</h2>
-              <p>Donec ac felis accumsan, ultrices augue sit amet, vestibulum sapien. Donec in est non dolor dignissim luctus sit amet at turpis. Aliquam lacinia, magna vitae accumsan ultricies, mauris velit fringilla felis, sed cursus nisi nisi sit amet turpis. Nulla convallis orci a tincidunt elementum. Sed posuere mattis laoreet. </p>
+              <h2>Intoduction</h2>
+              <p>i there! I'm [Your Name], a passionate software developer with a love for turning lines of code into meaningful solutions. My journey in the world of technology has been both exciting and rewarding, and I'm thrilled to share a bit of my story with you. </p>
             </Text>
           </Right>
           <BottomRight />
@@ -26,8 +26,8 @@ function About() {
         <Box>
           <Left>
             <Text>
-              <h2>TEXT 2</h2>
-              <p>Ut laoreet est et massa posuere scelerisque. Cras dui velit, interdum a nulla eget, fringilla elementum risus. Nulla est lectus, cursus nec vestibulum a, porta id tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc fermentum at nibh id pharetra. Phasellus vitae tellus dui.</p>
+              <h2>Professional Background</h2>
+              <p>I hold a [Your Degree] in [Your Field] and have gained valuable experience working in [Your Previous Companies or Projects]. From designing efficient algorithms to collaborating on cross-functional teams, my professional journey has equipped me with a robust skill set in [Key Technologies/Languages].</p>
             </Text>
             <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
           </Left>
@@ -37,8 +37,8 @@ function About() {
           <Right>
             <Thumbnail src={require('../components/Resources/Digital/knot.jpg')} alt="Knot" />
             <Text>
-              <h2>TEXT 3</h2>
-              <p>Cras dui velit, interdum a nulla eget, fringilla elementum risus. Nulla est lectus, cursus nec vestibulum a, porta id tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc fermentum at nibh id pharetra. Phasellus vitae tellus dui.</p>
+              <h2>Work Philosophy</h2>
+              <p>In my approach to software development, I believe in the power of collaboration, continuous learning, and a touch of creativity. My philosophy is rooted in writing clean, scalable code while fostering a positive team environment. I'm driven by the thrill of solving complex problems and delivering solutions that make a real impact.</p>
             </Text>
           </Right>
           <BottomRight />
@@ -46,15 +46,15 @@ function About() {
         <Box>
           <Left>
             <Text>
-              <h2>TEXT 4</h2>
-              <p>Nulla est lectus, cursus nec vestibulum a.</p>
+              <h2>Passions and Interests</h2>
+              <p>Beyond the lines of code, you'll find me exploring my passions and interests. Whether it's diving into the latest tech trends, contributing to open-source projects, or enjoying the great outdoors, I believe in maintaining a balance between work and life. Let's chat about [One or Two Specific Interests] over a cup of coffee!</p>
             </Text>
             <Thumbnail src={require('../components/Resources/Digital/cave.jpg')} alt="Cave" />
           </Left>
           <BottomLeft />
         </Box>
       </Content>
-    </div>
+    </div >
   );
 }
 
@@ -63,7 +63,7 @@ const Header = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 10%;
-  padding-top: 100px;
+  padding-top: 50px;
   max-height: 250px;
 `;
 
@@ -129,7 +129,7 @@ justify-content: center;
 
 const Thumbnail = styled.img`
 margin: 20px;
-padding-top: 40px;
+padding-top: 0px;
 z-index: 10;
   width: 100%;
   max-width: 400px;
