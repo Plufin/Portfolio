@@ -57,77 +57,117 @@ function Home() {
 }
 
 const Main = styled.div`
-  padding-left: 10%;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  padding-bottom: 100px;
+padding-left: 10%;
+flex: 1;
+display: flex;
+align-items: center;
+padding-bottom: 100px;
+
+  @media (max-width: 768px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+  }
 `;
 
 const Content = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: flex-start;
-  background-color: #47358c40;
-  height: 500px;
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+justify-content: flex-start;
+background-color: #47358c40;
+height: 500px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 50px;
+  }
 `;
 
 const Intro = styled.div`
+flex: 1;
+display: flex;
+flex-direction: column;
+padding-left: 60px;
+height: 100%;
+max-width: 550px;
+min-width: 350px;
+
+  @media (max-width: 768px) {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-left: 60px;
+  padding-left: 0;
   height: 100%;
-  max-width: 550px;
-  min-width: 350px;
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
 `;
 
 const Picture = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
+flex: 1;
+display: flex;
+justify-content: flex-start;
+
+  @media (max-width: 768px) {
+  justify-content: center;
+  margin-top: 20px;
 `;
 
 const Profile = styled.img`
-  width: 100%;
-  max-width: 800px;
-  min-width: 550px;
-`;
+width: 100%;
+max-width: 800px;
 
+  @media (max-width: 768px) {
+  max-width: 100%;
+`;
 
 const Contact = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-bottom: 20px;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+padding-bottom: 20px;
+
+  @media (max-width: 768px) {
+  justify-content: center;
 `;
 
-const IconContainer = styled.span`
-color: #E2EFF2;
+const IconContainer = styled.a`
+  color: #e2eff2;
   margin-right: 10px;
   font-size: 40px;
 
   &:hover {
-    color: #BDAEFF;
+    color: #bdaeff;
     cursor: pointer;
   }
 `;
 
 const Title = styled.div`
-padding-top: 25px;
-flex: 1;
+  padding-top: 25px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding-bottom: 20px;
 
   h1 {
+
     font-size: 80px;
     font-weight: 700;
     margin: 0;
     padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 60px;
+      justify-content: center;
+    }
   }
 `;
 
@@ -135,7 +175,7 @@ const Student = styled.div`
   padding-bottom: 25px;
   flex: 1;
   max-width: 350px;
-  `;
+`;
 
 const SlidingText = styled.h2`
   overflow: hidden;

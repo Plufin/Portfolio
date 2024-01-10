@@ -20,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
   height: 100vh;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) { 
+    height: auto;
   }
   
   h1 {
@@ -63,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
       flex-direction: row;
     }
   }
-  @media (max-width: 950px) {
+  @media (max-width: 768px) {
     /* Media query for smaller screens */
     h1 {
       font-size: 48px; 

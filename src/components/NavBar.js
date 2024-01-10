@@ -48,7 +48,7 @@ const StyledNavBar = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
   }
