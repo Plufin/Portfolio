@@ -14,11 +14,11 @@ function About() {
       </Header>
       <Content>
         <Box>
-          <Right style={{ marginTop: '90px' }}>
+          <Right>
             <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
             <Text>
-              <h2>Intoduction</h2>
-              <p>i there! I'm [Your Name], a passionate software developer with a love for turning lines of code into meaningful solutions. My journey in the world of technology has been both exciting and rewarding, and I'm thrilled to share a bit of my story with you. </p>
+              <h2>Introduction</h2>
+              <p>Hello there! I'm [Your Name], a passionate software developer with a love for turning lines of code into meaningful solutions. My journey in the world of technology has been both exciting and rewarding, and I'm thrilled to share a bit of my story with you.</p>
             </Text>
           </Right>
           <BottomRight />
@@ -54,7 +54,7 @@ function About() {
           <BottomLeft />
         </Box>
       </Content>
-    </div >
+    </div>
   );
 }
 
@@ -65,12 +65,22 @@ const Header = styled.div`
   padding-left: 10%;
   padding-top: 50px;
   max-height: 250px;
+
+  @media (max-width: 768px) {
+    padding-left: 0px;
+  }
 `;
 
 const Title = styled.div`
   border-bottom: 1px solid #FCD864;
   min-width: 150px;
   max-width: 350px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 150px;
+    padding-left: 5%;
+    border-bottom: 1px solid #FCD864;
+    max-width: 100%;
 `;
 
 const Content = styled.div`
@@ -83,21 +93,25 @@ const Box = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow:visible;
+  overflow: visible;
   justify-content: center;
-  `;
+`;
 
 const Bottom = styled.div`
-margin-top: 100px;
-margin-bottom:100px;
-height: 70px;
-background-color: #47358C40;
-border: 100px 0px 0px 0px #FCD864; 
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 70px;
+  background-color: #47358C40;
+  border: 100px 0px 0px 0px #FCD864; 
   box-shadow: 0 4px 2px -2px #FCD864;
+
+  @media (max-width: 768px) {
+    background-color: #47358C00;
+    box-shadow: 0 4px 2px -2px #FCD86400;
 `;
 
 const Left = styled.div`
-margin-top: 150px;
+  margin-top: 150px;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -105,6 +119,12 @@ margin-top: 150px;
   align-items: flex-start;
   max-height: 300px;
   overflow: visible;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+  }
 `;
 
 const BottomLeft = styled(Bottom)`
@@ -115,25 +135,38 @@ const BottomRight = styled(Bottom)`
   margin-left: 7%;
 `;
 
-
-
 const Right = styled.div`
-margin-top: 150px;
+  margin-top: 150px;
   flex: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-max-height: 300px;
-justify-content: center;
+  max-height: 300px;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 150px;
+  }
 `;
 
 const Thumbnail = styled.img`
-margin: 20px;
-padding-top: 0px;
-z-index: 10;
+  margin: 20px;
+  padding-top: 0px;
+  z-index: 10;
   width: 100%;
   max-width: 400px;
   min-width: 150px;
+
+  @media (max-width: 768px) {
+    margin: 5%;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border-bottom: 2px solid #FCD864;
+  }
 `;
 
 const Text = styled.div`
@@ -152,6 +185,14 @@ const Text = styled.div`
     font-size: 30px;
     font-weight: 400;
     padding-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+
+    p {
+      text-align: justify;
+    }
   }
 `;
 
