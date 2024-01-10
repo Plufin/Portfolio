@@ -7,9 +7,7 @@ function Skills() {
     <div className="base">
       <Global />
       <Content>
-        <Container>
-          <ToggleSkills />
-        </Container>
+        <ToggleSkills />
       </Content>
     </div>
   );
@@ -23,16 +21,7 @@ display: flex;
   align-content: center;
   `;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: #47358c40;
-  width: 100%;
-  max-width: 900px;
-  height: 100%;
-  max-height: 600px;
-  padding: 60px 60px 60px 60px;
-  `;
+
 
 
 export default Skills;

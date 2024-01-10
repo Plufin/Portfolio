@@ -14,40 +14,43 @@ const ToggleSkills = () => {
   };
 
   return (
-    <Content>
-      <ButtonContainer>
-        <ToggleButton onClick={() => handleToggle('art')} selected={selectedSection === 'art'}>
-          <p className={selectedSection === 'art' ? 'selected' : ''}>ART</p>
-          <IconContainer selected={selectedSection === 'art'}>
-            <BsBrush />
-          </IconContainer>
-        </ToggleButton>
-        <ToggleButton onClick={() => handleToggle('code')} selected={selectedSection === 'code'}>
-          <p className={selectedSection === 'code' ? 'selected' : ''}>CODE</p>
-          <IconContainer selected={selectedSection === 'code'}>
-            <FaCode />
-          </IconContainer>
-        </ToggleButton>
-        <ToggleButton onClick={() => handleToggle('teamwork')} selected={selectedSection === 'teamwork'}>
-          <p className={selectedSection === 'teamwork' ? 'selected' : ''}>TEAMWORK</p>
-          <IconContainer selected={selectedSection === 'teamwork'}>
-            <RiTeamLine />
-          </IconContainer>
-        </ToggleButton>
-      </ButtonContainer>
-      <Detail>
-        {selectedSection === 'art' && <ArtContent />}
-        {selectedSection === 'code' && <CodeContent />}
-        {selectedSection === 'teamwork' && <TeamworkContent />}
-      </Detail>
-    </Content>
+    <Container>
+      <Content>
+        <ButtonContainer center={!selectedSection}>
+          <ToggleButton onClick={() => handleToggle('art')} selected={selectedSection === 'art'}>
+            <p className={selectedSection === 'art' ? 'selected' : ''}>ART</p>
+            <IconContainer selected={selectedSection === 'art'}>
+              <BsBrush />
+            </IconContainer>
+          </ToggleButton>
+          <ToggleButton onClick={() => handleToggle('code')} selected={selectedSection === 'code'}>
+            <p className={selectedSection === 'code' ? 'selected' : ''}>CODE</p>
+            <IconContainer selected={selectedSection === 'code'}>
+              <FaCode />
+            </IconContainer>
+          </ToggleButton>
+          <ToggleButton onClick={() => handleToggle('teamwork')} selected={selectedSection === 'teamwork'}>
+            <p className={selectedSection === 'teamwork' ? 'selected' : ''}>TEAMWORK</p>
+            <IconContainer selected={selectedSection === 'teamwork'}>
+              <RiTeamLine />
+            </IconContainer>
+          </ToggleButton>
+        </ButtonContainer>
+        <Detail>
+          {selectedSection === 'art' && <ArtContent />}
+          {selectedSection === 'code' && <CodeContent />}
+          {selectedSection === 'teamwork' && <TeamworkContent />}
+        </Detail>
+      </Content>
+    </Container>
   );
 };
 
 const ArtContent = () => (
   <Art>
+    <p style={{ marginBottom: '50px', alignSelf: 'flex-start' }}>Let the Work Speak For Itself</p>
     <ArtList />
-    <Button to="/gallery" target="_blank" rel="noopener noreferrer">See More</Button>
+    <Button to="/gallery" target="_blank" rel="noopener noreferrer">SEE ALL</Button>
   </Art>
 );
 
@@ -60,21 +63,27 @@ const CodeContent = () => {
   };
 
   return (
-    <RatingsContainer>
-      {Object.entries(predeterminedRatings).map(([skill, rating]) => (
-        <SkillRating key={skill} skill={skill} rating={rating} />
-      ))}
-    </RatingsContainer>
+    <div>
+      <p style={{ marginBottom: '30px', alignSelf: 'flex-start', maxWidth: '700px' }}>
+        Since coding skills are subjective and ever-evolving, I've rated my skills based on my confidence ✨
+      </p>
+      <RatingsContainer>
+        {Object.entries(predeterminedRatings).map(([skill, rating]) => (
+          <SkillRating key={skill} skill={skill} rating={rating} />
+        ))}
+      </RatingsContainer>
+    </div>
   );
 };
 
 const TeamworkContent = () => (
   <div>
+    <p style={{ marginBottom: '50px' }}>Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam. Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
     <p><span style={{ color: '#FCD864' }}>Vice President</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
     <p><span style={{ color: '#FCD864' }}>Freelancer</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
     <p><span style={{ color: '#FCD864' }}>Customer Service</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
     <p><span style={{ color: '#FCD864' }}>Peacekeeper</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
-  </div>
+  </div >
 );
 
 const Content = styled.div`
@@ -85,14 +94,29 @@ const Content = styled.div`
   padding: 20px 0px 20px 0px;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #47358c40;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 600px;
+  padding: 60px 60px 60px 60px;
+  overflow: hidden;
+  `;
+
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content:space-between;
+  width: 80%;
   padding-left: 30px;
   padding-right: 30px;
+  margin-top: ${({ center }) => (center ? '170px' : '0')};
+  transition: margin-top 0.5s ease;
+  margin-bottom: ${({ center }) => (center ? '0px' : '0px')};
 `;
 
 const Button = styled.a`
@@ -118,7 +142,7 @@ const ToggleButton = styled.button`
   cursor: pointer;
   padding: 10px;
   
-
+  
   &:hover {
     background-color: #47358C;
   }
@@ -142,7 +166,7 @@ const IconContainer = styled.div`
   font-size: 50px;
 `;
 const Detail = styled.div`
-padding-top: 40px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;

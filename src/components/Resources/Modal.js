@@ -1,0 +1,43 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const Modal = ({ onClose, children }) => (
+  <ModalOverlay onClick={onClose}>
+    <ModalContent onClick={(e) => e.stopPropagation()}>
+      <CloseButton onClick={onClose}>&times;</CloseButton>
+      {children}
+    </ModalContent>
+  </ModalOverlay>
+);
+
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ModalContent = styled.div`
+flex: 1;
+justify-content: center;
+align-items: center;
+box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  max-width: 70%;
+  width: 100%;
+`;
+
+const CloseButton = styled.span`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+`;
+
+export default Modal;

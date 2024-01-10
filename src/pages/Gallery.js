@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import Global from '../components/global';
 import styled from 'styled-components';
 import GalleryList from '../components/Resources/galleryList';
+import Modal from '../components/Resources/Modal';
 
 function Gallery() {
   const [selectedFilters, setSelectedFilters] = useState([]);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleFilterClick = (filter) => {
     if (selectedFilters.includes(filter)) {
@@ -12,6 +15,16 @@ function Gallery() {
     } else {
       setSelectedFilters([...selectedFilters, filter]);
     }
+  };
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setModalOpen(false);
   };
 
   const filterImages = (tags) => {
@@ -40,9 +53,14 @@ function Gallery() {
           ))}
         </Filter>
         <Media>
-          <GalleryList filterImages={filterImages} />
+          <GalleryList filterImages={filterImages} openModal={openModal} />
         </Media>
       </Main>
+      {isModalOpen && selectedImage && (
+        <Modal onClose={closeModal}>
+          <img src={selectedImage.src} alt={selectedImage.alt} style={{ width: '100%' }} />
+        </Modal>
+      )}
     </div>
   );
 }
@@ -97,6 +115,7 @@ flex-direction: row;
 flex-wrap: wrap;
 align-items: flex-start;
 margin-top: 20px;
+max-width: 95%;
 padding: 20px;
 `;
 

@@ -1,13 +1,17 @@
 import React from "react";
 import styled from 'styled-components';
 
-const GalleryList = ({ filterImages }) => (
+const getImageInfo = (imageName, altText) => ({
+  src: require(`../Resources/Digital/${imageName}`),
+  alt: altText,
+});
 
+const GalleryList = ({ filterImages, openModal }) => (
   <MiniGallery>
     {/*DIGITAL*/}
     {/*TOP*/}
-    <Gallery src={require('../Resources/Digital/dragonPeace.png')} alt="Peace" tags={['COMMISSION', 'DIGITAL']} filterImages={filterImages} />
-    <Gallery src={require('../Resources/Digital/alienBug.png')} alt="Alien Bug" tags={['COMMISSION', 'DIGITAL']} filterImages={filterImages} />
+    <Gallery src={require('../Resources/Digital/dragonPeace.png')} alt="Peace" tags={['COMMISSION', 'DIGITAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('dragonPeace.png', 'Peace'))} />
+    <Gallery src={require('../Resources/Digital/alienBug.png')} alt="Alien Bug" tags={['COMMISSION', 'DIGITAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('alienBug.png', 'Alien Bug'))} />
     <Gallery src={require('../Resources/Digital/phoenix.png')} alt="Phoenix" tags={['DIGITAL']} filterImages={filterImages} />
     <Gallery src={require('../Resources/Digital/predator.jpg')} alt="Predator" tags={['DIGITAL']} filterImages={filterImages} />
     <Gallery src={require('../Resources/Digital/Gargoyle.png')} alt="Gargoyle" tags={['DIGITAL']} filterImages={filterImages} />
@@ -58,8 +62,8 @@ const GalleryList = ({ filterImages }) => (
   </MiniGallery>
 );
 
-const Gallery = ({ src, alt, tags, filterImages }) => (
-  <div data-tags={tags.join(' ')} className="gallery-item" style={{ display: filterImages(tags) ? 'block' : 'none' }}>
+const Gallery = ({ src, alt, tags, filterImages, openModal }) => (
+  <div data-tags={tags.join(' ')} className="gallery-item" style={{ display: filterImages(tags) ? 'block' : 'none' }} onClick={openModal}>
     <StyledImage altText={alt}>
       <StyledImageContent src={src} alt={alt} loading="lazy" />
     </StyledImage>
