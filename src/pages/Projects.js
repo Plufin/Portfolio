@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import Global from '../components/global';
-import NavBar from '../components/NavBar';
 import styled from 'styled-components';
 
 function Projects() {

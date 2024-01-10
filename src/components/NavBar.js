@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const StyledButton = styled.button`
-  margin-left: 80px;
+  margin-left: 20px;
   background-color: transparent;
   color: ${(props) => (props.isSelected ? "#FFD700" : "#000")};
   cursor: pointer;
@@ -43,10 +43,15 @@ const TooltipText = styled.span`
 const StyledNavBar = styled.div`
   background-color: transparent;
   border-bottom: 2px solid #bdaeff;
-  padding: 30px;
-  padding-right: 50px;
+  padding: 20px;
+  padding-right: 30px;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const NavBar = () => {
@@ -56,22 +61,22 @@ const NavBar = () => {
     <StyledNavBar>
       <Global />
       <NavItem selected={selected === 0} id={0} setSelected={setSelected} to="/">
-        <TooltipText>home</TooltipText>
+        <TooltipText>HOME</TooltipText>
       </NavItem>
       <NavItem selected={selected === 1} id={1} setSelected={setSelected} to="/about">
-        <TooltipText>about</TooltipText>
+        <TooltipText>ABOUT</TooltipText>
       </NavItem>
       <NavItem selected={selected === 2} id={2} setSelected={setSelected} to="/skills">
-        <TooltipText>skills</TooltipText>
+        <TooltipText>SKILLS</TooltipText>
       </NavItem>
       <NavItem selected={selected === 3} id={3} setSelected={setSelected} to="/projects">
-        <TooltipText>projects</TooltipText>
+        <TooltipText>PROJECTS</TooltipText>
       </NavItem>
       <NavItem selected={selected === 4} id={4} setSelected={setSelected} to="/gallery">
-        <TooltipText>gallery</TooltipText>
+        <TooltipText>GALLERY</TooltipText>
       </NavItem>
       <NavItem selected={selected === 5} id={5} setSelected={setSelected} to="/contact">
-        <TooltipText>contact</TooltipText>
+        <TooltipText>CONTACT</TooltipText>
       </NavItem>
     </StyledNavBar>
   );
