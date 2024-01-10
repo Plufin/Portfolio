@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const ArtList = () => (
   <MiniGallery>
-    <Gallery src={require('../Resources/cave.jpg')} alt="Cave" />
-    <Gallery src={require('../Resources/fish.jpg')} alt="Fish" />
+    <Gallery src={require('../Resources/Digital/cave.jpg')} alt="Cave" />
+    <Gallery src={require('../Resources/Digital/fish.jpg')} alt="Fish" />
     <Gallery src={require('../Resources/Traditional/fox.png')} alt="Fox" />
-    <Gallery src={require('../Resources/hex.jpg')} alt="Hex" />
-    <Gallery src={require('../Resources/knot.jpg')} alt="Knot" />
+    <Gallery src={require('../Resources/Digital/hex.jpg')} alt="Hex" />
+    <Gallery src={require('../Resources/Digital/knot.jpg')} alt="Knot" />
   </MiniGallery>
 );
 
