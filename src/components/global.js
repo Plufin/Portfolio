@@ -61,7 +61,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
 
-  @media (min-width: 951px) {
+  @media (min-width: 768px) {
     .content {
       flex-direction: row;
     }

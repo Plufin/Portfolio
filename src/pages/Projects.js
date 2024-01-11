@@ -53,6 +53,7 @@ const Header = styled.div`
     width: 100%;
     padding-top: 50px;
     margin-bottom: 0px;
+    
   }
 `;
 
