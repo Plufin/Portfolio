@@ -21,7 +21,10 @@ const Content = styled.div`
   align-content: center;
 
   @media (max-width: 768px) {
+    height: 100%;
+    margin-top: 25px;
     padding: 20px;
+    padding-bottom: 0px;
   }
 `;
 

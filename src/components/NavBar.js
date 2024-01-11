@@ -31,7 +31,12 @@ const StyledSpanBackground = styled.span`
 
 const TooltipText = styled.span`
   color: #e2eff2;
-  font-size: 14px;
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    
+  }
 
   &:hover {
     text-decoration: underline;

@@ -8,6 +8,7 @@ function Gallery() {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showFilters, setShowFilters] = useState(false);
 
   const handleFilterClick = (filter) => {
     if (selectedFilters.includes(filter)) {
@@ -38,20 +39,22 @@ function Gallery() {
     <div className="base">
       <Global />
       <Main>
-        {        /*<All>
-          <h2 onClick={() => setSelectedFilters([])}>ALL</h2>
-        </All>*/}
-        <Filter>
-          {['COMMISSION', 'DIGITAL', 'TRADITIONAL', 'WEB DESIGN', 'TATTOO'].map((filter) => (
-            <h2
-              key={filter}
-              onClick={() => handleFilterClick(filter)}
-              className={selectedFilters.includes(filter) ? 'selected' : ''}
-            >
-              {filter}
-            </h2>
-          ))}
-        </Filter>
+        <ToggleFiltersButton onClick={() => setShowFilters(!showFilters)}>
+          {showFilters ? 'Hide Filters' : 'Filters'}
+        </ToggleFiltersButton>
+        {showFilters && (
+          <Filter>
+            {['COMMISSION', 'DIGITAL', 'TRADITIONAL', 'WEB DESIGN', 'TATTOO'].map((filter) => (
+              <h2
+                key={filter}
+                onClick={() => handleFilterClick(filter)}
+                className={selectedFilters.includes(filter) ? 'selected' : ''}
+              >
+                {filter}
+              </h2>
+            ))}
+          </Filter>
+        )}
         <Media>
           <GalleryList filterImages={filterImages} openModal={openModal} />
         </Media>
@@ -72,14 +75,28 @@ const Main = styled.div`
   justify-content: center;
 `;
 
+const ToggleFiltersButton = styled.button`
+align-self: center;
+width: 200px;
+margin: 20px;
+color: #E2EFF2;
+  background-color: #47358c30;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #E2EFF2;
+  font-family: Montserrat;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+`;
+
 const Filter = styled.div`
-max-height: 100px;
   flex: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 10px;
   margin-top: 10px;
 
   h2 {
@@ -103,20 +120,20 @@ max-height: 100px;
     }
 
     @media (max-width: 1100px) {
-      font-size: 22px;
+      font-size: 14px;
     }
   }
 `;
 
+
 const Media = styled.div`
-flex: 1;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: flex-start;
-margin-top: 20px;
-max-width: 95%;
-padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 95%;
+  padding: 20px;
 `;
 
 export default Gallery;

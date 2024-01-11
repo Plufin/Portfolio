@@ -135,7 +135,7 @@ const Thumbnail = styled.img`
   @media (max-width: 768px) {
     width: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0px;
     border-bottom: 2px solid #FCD864;
 `;
 
@@ -153,6 +153,11 @@ const Text = styled.div`
     text-align: left;
     color: #FCD864;
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      color: #FCD864;
+    }
   `;
 
 
