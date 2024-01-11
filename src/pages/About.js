@@ -67,6 +67,7 @@ const Header = styled.div`
   max-height: 250px;
 
   @media (max-width: 768px) {
+    width: 100%;
     padding-left: 0px;
   }
 `;
@@ -185,14 +186,14 @@ const Text = styled.div`
     font-size: 30px;
     font-weight: 400;
     padding-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
   }
 
   @media (max-width: 768px) {
     align-items: flex-start;
-
-    p {
-      text-align: justify;
-    }
   }
 `;
 
