@@ -17,6 +17,10 @@ const SkillRatingContainer = styled.div`
 
 const StarsContainer = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const Star = styled(FaStar)`

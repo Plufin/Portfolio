@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import SkillRating from './skillRating';
 import ArtList from './artList';
 import { RiTeamLine } from 'react-icons/ri';
@@ -30,7 +32,7 @@ const ToggleSkills = () => {
             </IconContainer>
           </ToggleButton>
           <ToggleButton onClick={() => handleToggle('teamwork')} selected={selectedSection === 'teamwork'}>
-            <p className={selectedSection === 'teamwork' ? 'selected' : ''}>TEAMWORK</p>
+            <p className={selectedSection === 'teamwork' ? 'selected' : ''}>TEAM</p>
             <IconContainer selected={selectedSection === 'teamwork'}>
               <RiTeamLine />
             </IconContainer>
@@ -48,9 +50,9 @@ const ToggleSkills = () => {
 
 const ArtContent = () => (
   <Art>
-    <p style={{ marginBottom: '50px', alignSelf: 'flex-start' }}>Let the Work Speak For Itself</p>
+    <p style={{ marginBottom: '50px', alignSelf: 'flex-start' }}>Let the Work Speak For Itself ~</p>
     <ArtList />
-    <Button to="/gallery" target="_blank" rel="noopener noreferrer">SEE ALL</Button>
+    <Button to="/gallery">SEE ALL</Button>
   </Art>
 );
 
@@ -92,6 +94,11 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px 0px 20px 0px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding-left: 0px;
+  }
 `;
 
 const Container = styled.div`
@@ -104,6 +111,13 @@ const Container = styled.div`
   max-height: 600px;
   padding: 60px 60px 60px 60px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0px 20px 250px 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 20px;
+  }
   `;
 
 const ButtonContainer = styled.div`
@@ -116,20 +130,29 @@ const ButtonContainer = styled.div`
   padding-right: 30px;
   margin-top: ${({ center }) => (center ? '170px' : '0')};
   transition: margin-top 0.5s ease;
-  margin-bottom: ${({ center }) => (center ? '0px' : '0px')};
+
+  @media (max-width: 768px) {
+    padding-left: 0px;
+    padding-right: 0px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+  }
 `;
 
-const Button = styled.a`
-padding: 10px 20px 10px 20px;
+const Button = styled(Link)`
+  padding: 10px 20px 10px 20px;
   background-color: #47358C;
   border-radius: 6px;
+  text-decoration: none;
+  color: #E2EFF2;
 
   &:hover {
     cursor: pointer;
     background-color: #000;
-    text-decoration: none;
   }
 `;
+
 
 const ToggleButton = styled.button`
   display: flex;
@@ -141,6 +164,10 @@ const ToggleButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
+
+  @media (max-width: 768px) {
+    width: 48%;
+  }
   
   
   &:hover {
@@ -156,7 +183,6 @@ const ToggleButton = styled.button`
     p {
       color: #FCD864;
     }
-  }
 `;
 
 const IconContainer = styled.div`
@@ -164,6 +190,10 @@ const IconContainer = styled.div`
   margin-top: 8px;
   color: ${({ selected }) => (selected ? '#FCD864' : '#EEF1DC')};
   font-size: 50px;
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 const Detail = styled.div`
   padding-top: 40px;
@@ -171,18 +201,35 @@ const Detail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    flex-wrap: wrap;
+    
+  }
 `;
 
 const RatingsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
 `;
 
 const Art = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
 `;
 
 export default ToggleSkills;
