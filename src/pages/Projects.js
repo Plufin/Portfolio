@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Global from '../components/global';
 import styled from 'styled-components';
+import { AiFillGithub } from 'react-icons/ai';
+import { hover } from '@testing-library/user-event/dist/hover';
 
 function Projects() {
   return (
@@ -16,8 +18,13 @@ function Projects() {
         <Box>
           <Left>
             <Text>
-              <h2>TEXT 1</h2>
-              <p>Donec ac felis accumsan, ultrices augue sit amet, vestibulum sapien. Donec in est non dolor dignissim luctus sit amet at turpis. Aliquam lacinia, magna vitae accumsan ultricies, mauris velit fringilla felis, sed cursus nisi nisi sit amet turpis. Nulla convallis orci a tincidunt elementum. Sed posuere mattis laoreet. </p>
+              <Top>
+                <h2>Full Stack MovieApp</h2>
+                <IconContainer href="https://github.com/Plufin/MovieApp">
+                  <AiFillGithub />
+                </IconContainer>
+              </Top>
+              <p>Web application that integrates React and Node.js, offering a wide selection of movies and series from an API, a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series, engage in discussions within groups, and explore content through news and reviews submitted by others.</p>
             </Text>
             <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
 
@@ -28,16 +35,55 @@ function Projects() {
 
             <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
             <Text>
-              <h2>TEXT 2</h2>
-              <p>Ut laoreet est et massa posuere scelerisque. Cras dui velit, interdum a nulla eget, fringilla elementum risus. Nulla est lectus, cursus nec vestibulum a, porta id tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc fermentum at nibh id pharetra. Phasellus vitae tellus dui.</p>
+              <Top>
+                <h2>This Portfolio</h2>
+                <IconContainer href="https://github.com/Plufin/Portfolio">
+                  <AiFillGithub />
+                </IconContainer>
+              </Top>
+              <p>This portfolio is one of my first works consentrating on frontend. I made myself a challenge to do this in a week, designing and all. It took me 7 days to design a wireframe with various color palettes, gather images and make a filtering option. I tried to consentrate on user friendliness and simple design for easy navigation. Hope you like it!</p>
             </Text>
           </Right>
+        </Box>
+        <Box>
+          <Left>
+            <Text>
+              <Top>
+                <h2>Esroniet</h2>
+              </Top>
+              <p>Art :) </p>
+            </Text>
+            <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
+
+          </Left>
         </Box>
       </Content>
 
     </div>
   );
 }
+
+const Top = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const IconContainer = styled.a`
+  display: flex;
+  padding: 5px;
+  background-color: #47358C;
+  margin-left: 20px;
+  border-radius: 6px;
+  color: #E2EFF2;
+  font-size: 30px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #FCD864;
+    color: #18171C;
+  }
+  `;
 
 const Header = styled.div`
   flex: 1;

@@ -42,7 +42,7 @@ function Home() {
               <IconContainer href="https://www.linkedin.com/in/paula-ervasti-23b268258/">
                 <CiLinkedin />
               </IconContainer>
-              <IconContainer href="https://github.com/your-username">
+              <IconContainer href="https://github.com/Plufin">
                 <AiFillGithub />
               </IconContainer>
             </Contact>
