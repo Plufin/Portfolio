@@ -85,6 +85,7 @@ const TeamworkContent = () => (
     <p><span style={{ color: '#FCD864' }}>Freelancer</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
     <p><span style={{ color: '#FCD864' }}>Customer Service</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
     <p><span style={{ color: '#FCD864' }}>Peacekeeper</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
+    <p>suunnittele, toteuta, valvo, seuraa, raportoi</p>
   </div >
 );
 

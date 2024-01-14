@@ -4,7 +4,7 @@ import '@fontsource/oswald';
 
 
 const themeDark = {
-  text: '#E2EFF2',
+  text: '#F3F3E7',
   background: '#18171C',
   primary: '#47358C40',
   secondary: '#BDAEFF',
@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: left;
     color: #EEF1DC;
     text-shadow: 2px 2px #212427;
+
   }
 
   h2 {
@@ -41,11 +42,24 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 2px 2px #212427;
   }
 
-  p {
-    font-size: 18px;
+  li {
+    font-size: 20px;
     font-family: Montserrat;
     text-align: left;
     color: #F3F3E7;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 20px;
+    font-family: Montserrat;
+    text-align: left;
+    color: #F3F3E7;
+    line-height: 1.5;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
   button {
     font-family: Montserrat;
