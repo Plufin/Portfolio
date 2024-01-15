@@ -84,8 +84,8 @@ function About() {
         </Box>
         <Box>
           <Right onClick={openPhilosophyModal}>
-            <Thumbnail src={require('../components/Resources/Digital/knot.jpg')} alt="Knot" />
-            <Text>
+            <ThumbnailTwo src={require('../components/Resources/Digital/knot.jpg')} alt="Knot" />
+            <TextTwo>
               <h2>Work Philosophy</h2>
               <WorkPhilosophyList>
                 <li><strong style={{ color: '#BDAEFF' }}>Execute or Delegate:</strong> I take pride in trust. So if I promise, I do</li>
@@ -94,19 +94,19 @@ function About() {
                 <li><strong style={{ color: '#BDAEFF' }}>Strive for Optimal Outcomes:</strong> And be prepared for immediate compromises.</li>
                 <li><strong style={{ color: '#BDAEFF' }}>Answers Lay Everywhere:</strong> Observe. Think. Ask. Try</li>
               </WorkPhilosophyList>
-            </Text>
+            </TextTwo>
           </Right>
           <BottomRight />
         </Box>
         <Box>
-          <Left onClick={openPassionModal}>
-            <Text>
+          <LeftTwo onClick={openPassionModal}>
+            <TextTree>
               <h2>Passions and Interests</h2>
               <p>I love psychology, art and experiences. Brain teasers, projects and learning. No wonder I like to dive deep into everything new and learn!</p>
               <p>I tend to enjoy more than anything jumping into a project, let it be a simple puzzle or a wide full-stack project. As long as I have the opportunity to build something from the ground up and witness the entire creation taking shape out of nothing, I'm in my element. It's a process I love to repeat, over and over again. <strong style={{ color: '#FCD864' }}>★</strong></p>
-            </Text>
-            <Thumbnail src={require('../components/Resources/Digital/cave.jpg')} alt="Cave" />
-          </Left>
+            </TextTree>
+            <ThumbnailTree src={require('../components/Resources/Digital/cave.jpg')} alt="Cave" />
+          </LeftTwo>
           <BottomLeft />
         </Box>
         {isIntroModalOpen && <IntroModal onClose={closeIntroModal} />}
@@ -125,6 +125,7 @@ const Header = styled.div`
   padding-left: 10%;
   padding-top: 50px;
   max-height: 250px;
+  margin-bottom: 150px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -156,11 +157,14 @@ const Box = styled.div`
   flex-direction: column;
   overflow: visible;
   justify-content: center;
+  margin-bottom: 100px;
 
   h2 {
     color: #FCD864;
   }
-  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 150px;
 `;
 
 const Bottom = styled.div`
@@ -175,10 +179,10 @@ const Bottom = styled.div`
   @media (max-width: 768px) {
     background-color: #47358C00;
     box-shadow: 0 4px 2px -2px #FCD86400;
+    
 `;
 
 const Left = styled.div`
-  margin-top: 150px;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -193,16 +197,44 @@ const Left = styled.div`
     h2 {
       color: #47358C;
     }
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 150px;
+    max-height: 100%;
   }
 `;
 
+const LeftTwo = styled(Left)`
+flex: 1;
+display: flex;
+justify-content: center;
+flex-direction: row;
+align-items: flex-start;
+max-height: 300px;
+overflow: visible;
+
+&:hover {
+  cursor: pointer;
+
+  h2 {
+    color: #47358C;
+  }
+}
+
+@media (max-width: 768px) {
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+}
+`;
+
+
+
 const BottomLeft = styled(Bottom)`
   margin-right: 7%;
+  
 `;
 
 const BottomRight = styled(Bottom)`
@@ -210,7 +242,6 @@ const BottomRight = styled(Bottom)`
 `;
 
 const Right = styled.div`
-  margin-top: 150px;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -224,11 +255,13 @@ const Right = styled.div`
     h2 {
       color: #47358C;
     }
+  }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: center;
-    margin-bottom: 150px;
+    text-align: center;
+    padding-top: 50px;
   }
 `;
 
@@ -240,14 +273,46 @@ const Thumbnail = styled.img`
   min-width: 150px;
 
   @media (max-width: 768px) {
-    margin: 5%;
-    height: 400px;
-    width: 400px;
+    max-height: 300px;
+    min-width: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0px;
     border-bottom: 2px solid #FCD864;
   }
 `;
+
+const ThumbnailTwo = styled(Thumbnail)`
+  margin: 20px;
+  padding-top: 0px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 150px;
+
+  @media (max-width: 768px) {
+    max-height: 300px;
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    border-bottom: 2px solid #FCD864;
+  }
+`;
+
+const ThumbnailTree = styled(Thumbnail)`
+margin: 20px;
+padding-top: 0px;
+width: 100%;
+max-width: 400px;
+min-width: 150px;
+
+@media (max-width: 768px) {
+  max-height: 300px;
+  min-width: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+  border-bottom: 2px solid #FCD864;
+}
+`;
+
 
 const Text = styled.div`
   flex: 1;
@@ -262,13 +327,49 @@ const Text = styled.div`
 
     @media (max-width: 768px) {
       font-size: 25px;
-    }
-  }
-
-  @media (max-width: 768px) {
     align-items: flex-start;
+    padding-top: 0px;
   }
 `;
+
+const TextTwo = styled(Text)`
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding-top: 20px;
+padding-left: 20px;
+padding-right: 20px;
+max-width: 700px;
+min-width: 150px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  align-items: flex-start;
+  max-height: 430px;
+  padding-bottom: 300px;
+}
+`;
+
+const TextTree = styled(Text)`
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding-top: 20px;
+padding-left: 20px;
+padding-right: 20px;
+max-width: 700px;
+min-width: 150px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  align-items: flex-start;
+  max-height: 430px;
+  padding-bottom: 100px;
+}
+`;
+
 
 const Extra = styled.span`
   color: #FCD864;
