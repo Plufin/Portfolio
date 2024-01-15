@@ -1,10 +1,40 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Global from '../components/global';
 import styled from 'styled-components';
 import { AiFillGithub } from 'react-icons/ai';
-import { hover } from '@testing-library/user-event/dist/hover';
+import MovieModal from '../components/Projects/MovieModal';
+import PortfolioModal from '../components/Projects/PortfolioModal';
+import EsronietModal from '../components/Projects/EsronietModal';
 
 function Projects() {
+  const [isMovieModalOpen, setIsMovieModalOpen] = useState(false);
+  const [isPortfolioModalOpen, setIsPortfolioModalOpen] = useState(false);
+  const [isEsronietModalOpen, setIsEsronietModalOpen] = useState(false);
+
+  const openMovieModal = () => {
+    setIsMovieModalOpen(true);
+  };
+
+  const closeMovieModal = () => {
+    setIsMovieModalOpen(false);
+  };
+
+  const openPortfolioModal = () => {
+    setIsPortfolioModalOpen(true);
+  };
+
+  const closePortfolioModal = () => {
+    setIsPortfolioModalOpen(false);
+  };
+
+  const openEsronietModal = () => {
+    setIsEsronietModalOpen(true);
+  }
+
+  const closeEsronietModal = () => {
+    setIsEsronietModalOpen(false);
+  }
+
   return (
     <div className="base">
       <Global />
@@ -16,7 +46,7 @@ function Projects() {
       </Header>
       <Content>
         <Box>
-          <Left>
+          <Left onClick={openMovieModal}>
             <Text>
               <Top>
                 <h2>Full Stack MovieApp</h2>
@@ -24,15 +54,13 @@ function Projects() {
                   <AiFillGithub />
                 </IconContainer>
               </Top>
-              <p>Web application that integrates React and Node.js, offering a wide selection of movies and series from an API, a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series, engage in discussions within groups, and explore content through news and reviews submitted by others.</p>
+              <p>Web application that integrates React and Node.js, offering a wide selection of movies and series from an API, a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series, engage in discussions within groups, and explore content through news and reviews submitted by ....</p>
             </Text>
             <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
-
           </Left>
         </Box>
         <Box>
-          <Right>
-
+          <Right onClick={openPortfolioModal}>
             <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
             <Text>
               <Top>
@@ -46,7 +74,7 @@ function Projects() {
           </Right>
         </Box>
         <Box>
-          <Left>
+          <Left onClick={openEsronietModal}>
             <Text>
               <Top>
                 <h2>Esroniet</h2>
@@ -54,9 +82,11 @@ function Projects() {
               <p>Art :) </p>
             </Text>
             <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
-
           </Left>
         </Box>
+        {isMovieModalOpen && <MovieModal onClose={closeMovieModal} />}
+        {isPortfolioModalOpen && <PortfolioModal onClose={closePortfolioModal} />}
+        {isEsronietModalOpen && <EsronietModal onClose={closeEsronietModal} />}
       </Content>
 
     </div>
@@ -143,6 +173,11 @@ margin-left: 20%;
   height: 300px;
   margin-bottom: 80px;
 
+  &:hover {
+    cursor: pointer;
+    background: #47358C80;
+  }
+
   @media (max-width: 768px) {
     padding: 0px;
     background: transparent;
@@ -163,6 +198,11 @@ margin-right: 20%;
   padding: 30px;
   background: #47358C40;
   height: 300px;
+
+  &:hover {
+    cursor: pointer;
+    background: #47358C80;
+  }
 
   @media (max-width: 768px) {
     padding: 0px;
