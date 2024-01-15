@@ -1,8 +1,49 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Global from '../components/global';
 import styled from 'styled-components';
+import IntroModal from '../components/About/IntroModal';
+import BackgroundModal from '../components/About/BackgroundModal';
+import PhilosophyModal from '../components/About/PhilosophyModal';
+import PassionModal from '../components/About/PassionModal';
 
 function About() {
+  const [isIntroModalOpen, setIsIntroModalOpen] = useState(false);
+  const [isBackgroundModalOpen, setIsBackgroundModalOpen] = useState(false);
+  const [isPhilosophyModalOpen, setIsPhilosophyModalOpen] = useState(false);
+  const [isPassionModalOpen, setIsPassionModalOpen] = useState(false);
+
+  const openIntroModal = () => {
+    setIsIntroModalOpen(true);
+  };
+
+  const closeIntroModal = () => {
+    setIsIntroModalOpen(false);
+  };
+
+  const openBackgroundModal = () => {
+    setIsBackgroundModalOpen(true);
+  };
+
+  const closeBackgroundModal = () => {
+    setIsBackgroundModalOpen(false);
+  };
+
+  const openPhilosophyModal = () => {
+    setIsPhilosophyModalOpen(true);
+  };
+
+  const closePhilosophyModal = () => {
+    setIsPhilosophyModalOpen(false);
+  };
+
+  const openPassionModal = () => {
+    setIsPassionModalOpen(true);
+  };
+
+  const closePassionModal = () => {
+    setIsPassionModalOpen(false);
+  };
+
   return (
     <div className="base">
       <Global />
@@ -14,7 +55,7 @@ function About() {
       </Header>
       <Content>
         <Box>
-          <Right>
+          <Right onClick={openIntroModal}>
             <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
             <Text>
               <h2>Introduction</h2>
@@ -27,7 +68,7 @@ function About() {
           <BottomRight />
         </Box>
         <Box>
-          <Left>
+          <Left onClick={openBackgroundModal}>
             <Text>
               <h2>Professional Background</h2>
               <p>
@@ -42,7 +83,7 @@ function About() {
           <BottomLeft />
         </Box>
         <Box>
-          <Right>
+          <Right onClick={openPhilosophyModal}>
             <Thumbnail src={require('../components/Resources/Digital/knot.jpg')} alt="Knot" />
             <Text>
               <h2>Work Philosophy</h2>
@@ -58,7 +99,7 @@ function About() {
           <BottomRight />
         </Box>
         <Box>
-          <Left>
+          <Left onClick={openPassionModal}>
             <Text>
               <h2>Passions and Interests</h2>
               <p>I love psychology, art and experiences. Brain teasers, projects and learning. No wonder I like to dive deep into everything new and learn!</p>
@@ -68,6 +109,10 @@ function About() {
           </Left>
           <BottomLeft />
         </Box>
+        {isIntroModalOpen && <IntroModal onClose={closeIntroModal} />}
+        {isBackgroundModalOpen && <BackgroundModal onClose={closeBackgroundModal} />}
+        {isPhilosophyModalOpen && <PhilosophyModal onClose={closePhilosophyModal} />}
+        {isPassionModalOpen && <PassionModal onClose={closePassionModal} />}
       </Content>
     </div >
   );
@@ -111,6 +156,11 @@ const Box = styled.div`
   flex-direction: column;
   overflow: visible;
   justify-content: center;
+
+  h2 {
+    color: #FCD864;
+  }
+  }
 `;
 
 const Bottom = styled.div`
@@ -120,6 +170,7 @@ const Bottom = styled.div`
   background-color: #47358C40;
   border: 100px 0px 0px 0px #FCD864; 
   box-shadow: 0 4px 2px -2px #FCD864;
+  z-index: -10;
 
   @media (max-width: 768px) {
     background-color: #47358C00;
@@ -135,6 +186,13 @@ const Left = styled.div`
   align-items: flex-start;
   max-height: 300px;
   overflow: visible;
+
+  &:hover {
+    cursor: pointer;
+
+    h2 {
+      color: #47358C;
+    }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -160,6 +218,13 @@ const Right = styled.div`
   max-height: 300px;
   justify-content: center;
 
+  &:hover {
+    cursor: pointer;
+
+    h2 {
+      color: #47358C;
+    }
+
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: center;
@@ -170,7 +235,6 @@ const Right = styled.div`
 const Thumbnail = styled.img`
   margin: 20px;
   padding-top: 0px;
-  z-index: 10;
   width: 100%;
   max-width: 400px;
   min-width: 150px;
@@ -195,11 +259,6 @@ const Text = styled.div`
   padding-right: 20px;
   max-width: 700px;
   min-width: 150px;
-
-  h2 {
-    color: #FCD864;
-    font-size: 30px;
-    font-weight: 400;
 
     @media (max-width: 768px) {
       font-size: 25px;
@@ -258,5 +317,6 @@ const CV = styled.div`
 
 const WorkPhilosophyList = styled.ul`
 `;
+
 
 export default About;
