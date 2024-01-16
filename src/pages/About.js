@@ -107,7 +107,7 @@ function About() {
               <h2>Passions and Interests</h2>
               <p>I love psychology, art and experiences. Brain teasers, projects and learning. No wonder I like to dive deep into everything new and learn!</p>
               <p>I tend to enjoy more than anything jumping into a project, let it be a simple puzzle or a wide full-stack project. As long as I have the opportunity to build something from the ground up and witness the entire creation taking shape out of nothing, I'm in my element. It's a process I love to repeat, over and over again. <strong style={{ color: '#FCD864' }}>★</strong></p>
-              <p><Rest onClick={openPassionModal}>Read More...</Rest></p>
+              {/*<p><Rest onClick={openPassionModal}>Read More...</Rest></p>*/}
             </TextTree>
             <ThumbnailTree src={require('../components/Resources/Digital/cave.jpg')} alt="Cave" />
           </LeftTwo>
