@@ -99,7 +99,9 @@ const Filter = styled.div`
   justify-content: center;
   margin-top: 10px;
 
+
   h2 {
+    font-size: 20px;
     color: #E2EFF2;
     background-color: #47358c40;
     margin-left: 5px;
@@ -118,13 +120,9 @@ const Filter = styled.div`
     &.selected {
       border-color: #BDAEFF;
     }
-
     @media (max-width: 768px) {
-      font-size: 14px;
 
-      h2 {
-        font-size: 14px;
-      }
+      font-size: 12px;
     }
   }
 `;

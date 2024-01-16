@@ -46,7 +46,7 @@ function Projects() {
       </Header>
       <Content>
         <Box>
-          <Left onClick={openMovieModal}>
+          <Left>
             <Text>
               <Top>
                 <h2>Full Stack MovieApp</h2>
@@ -54,14 +54,26 @@ function Projects() {
                   <AiFillGithub />
                 </IconContainer>
               </Top>
-              <p>Web application that integrates React and Node.js, offering a wide selection of movies and series from an API, a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series, engage in discussions within groups, and explore content through news and reviews submitted by ....</p>
+              <p>Web application <a href="https://movieapp-976r.onrender.com/news">(Open App)</a> that integrates React and Node.js, offering a wide selection of movies and series from an API,
+                a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series,
+                engage in discussions within groups, and explore content through news and reviews submitted by users. <Rest onClick={openMovieModal}> Learn More...</Rest></p>
             </Text>
-            <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
+            <Thumbnail src={require('../components/Resources/Web/phoneColor.png')} alt="PhoneColor" />
           </Left>
         </Box>
         <Box>
-          <Right onClick={openPortfolioModal}>
-            <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
+          <Right>
+            <Thumbnail src={require('../components/Resources/Digital/knot.jpg')} alt="Knot" />
+            <Text>
+              <Top>
+                <h2>Hurmos</h2>
+              </Top>
+              <p>Nam quis sollicitudin risus. Morbi nec urna ac odio dictum suscipit sed a turpis. Curabitur cursus ante nec risus sollicitudin molestie. Fusce pharetra rutrum varius. In vitae neque a purus blandit tempus. Vestibulum maximus, augue a tempor pulvinar, sapien risus mattis diam, elementum auctor ipsum eros sed eros. <Rest onClick={openEsronietModal}> Learn More...</Rest> </p>
+            </Text>
+          </Right>
+        </Box>
+        <Box>
+          <Left>
             <Text>
               <Top>
                 <h2>This Portfolio</h2>
@@ -69,34 +81,27 @@ function Projects() {
                   <AiFillGithub />
                 </IconContainer>
               </Top>
-              <p>This portfolio is one of my first works consentrating on frontend. I made myself a challenge to do this in a week, designing and all. It took me 7 days to design a wireframe with various color palettes, gather images and make a filtering option. I tried to consentrate on user friendliness and simple design for easy navigation. Hope you like it!</p>
+              <p>This portfolio is one of my first works consentrating on frontend. I made myself a challenge to do this in a week,
+                designing and all. It took me 7 days to design a wireframe with various color palettes, gather images and make a filtering option.
+                I tried to consentrate on user friendliness and simple design for easy navigation. Hope you like it!  <Rest onClick={openPortfolioModal}> Learn More...</Rest></p>
             </Text>
-          </Right>
-        </Box>
-        <Box>
-          <Left onClick={openEsronietModal}>
-            <Text>
-              <Top>
-                <h2>Hurmos</h2>
-              </Top>
-              <p>Art :) </p>
-            </Text>
-            <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
+            <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
           </Left>
         </Box>
         {isMovieModalOpen && <MovieModal onClose={closeMovieModal} />}
         {isPortfolioModalOpen && <PortfolioModal onClose={closePortfolioModal} />}
         {isEsronietModalOpen && <EsronietModal onClose={closeEsronietModal} />}
       </Content>
-
     </div>
   );
 }
+
 
 const Top = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: #FCD864;
 `;
 
 const IconContainer = styled.a`
@@ -105,15 +110,15 @@ const IconContainer = styled.a`
   background-color: #47358C;
   margin-left: 20px;
   border-radius: 6px;
-  color: #E2EFF2;
+  color: #fff;
   font-size: 30px;
 
   &:hover {
     cursor: pointer;
-    background-color: #FCD864;
     color: #18171C;
   }
   `;
+
 
 const Header = styled.div`
   flex: 1;
@@ -152,12 +157,23 @@ const Content = styled.div`
 
 const Box = styled.div`
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  a {
+    color: #BDAEFF;
+    font-weight: 500;
+  
+    &:hover {
+      color: #FCD864;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -171,11 +187,10 @@ margin-left: 20%;
   padding: 30px;
   background: #47358C40;
   height: 300px;
-  margin-bottom: 80px;
 
-  &:hover {
-    cursor: pointer;
-    background: #47358C80;
+  @media (max-width: 1300px) {
+    background: transparent;
+    margin-left: 5%;
   }
 
   @media (max-width: 768px) {
@@ -199,10 +214,11 @@ margin-right: 20%;
   background: #47358C40;
   height: 300px;
 
-  &:hover {
-    cursor: pointer;
-    background: #47358C80;
+  @media (max-width: 1300px) {
+    background: transparent;
+    margin-right: 5%;
   }
+
 
   @media (max-width: 768px) {
     padding: 0px;
@@ -246,6 +262,16 @@ const Text = styled.div`
       color: #FCD864;
     }
   `;
+
+const Rest = styled.span`
+  color: #BDAEFF;
+  font-weight: 500;
+
+  &:hover {
+    color: #FCD864;
+    cursor: pointer;
+  }
+`;
 
 
 export default Projects;
