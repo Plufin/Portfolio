@@ -55,24 +55,26 @@ function About() {
       </Header>
       <Content>
         <Box>
-          <Right onClick={openIntroModal}>
+          <Right>
             <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
             <Text>
               <h2>Introduction</h2>
               <p>Hello! My name is Paula Ervasti and I am currently pursuing a degree in software engineering (2nd year) at Oulu
                 University of Applied Sciences and dedicated to evolving as a <Extra>full-stack </Extra>
                 developer. I value user-friendliness,
-                aesthetics, and efficiency in applications and as a result, I enjoy exploring materials related to psychology,
-                UI/UX, and efficient coding during my leisure time.</p>            </Text>
+                aesthetics, and efficiency in applications and as a result, I enjoy exploring materials related to psychology and
+                UI/UX during my leisure time. <Rest onClick={openIntroModal}>Read More...</Rest></p>
+            </Text>
           </Right>
           <BottomRight />
         </Box>
         <Box>
-          <Left onClick={openBackgroundModal}>
+          <Left>
             <Text>
               <h2>Professional Background</h2>
               <p>
-                Roles as a Sales Representative and Freelance 2D Artist, I've learned communication, creativity, and attention to detail. Serving two years in the Student Union OSAKO, currently as Vice Chairwoman, has strengthened my teamwork and leadership.
+                Roles as a Sales Representative and Freelance 2D Artist, I've learned communication, creativity, and attention to detail. Serving two years in the Student Union OSAKO,
+                currently as Vice Chairwoman, has strengthened my teamwork and leadership. <Rest onClick={openBackgroundModal}>Read More...</Rest>
               </p>
               <CV>
                 <Button href="https://www.linkedin.com/in/paula-ervasti-23b268258/"><p>Open CV</p></Button> <p>(And feel free to save it) :)</p>
@@ -83,7 +85,7 @@ function About() {
           <BottomLeft />
         </Box>
         <Box>
-          <Right onClick={openPhilosophyModal}>
+          <Right >
             <ThumbnailTwo src={require('../components/Resources/Digital/knot.jpg')} alt="Knot" />
             <TextTwo>
               <h2>Work Philosophy</h2>
@@ -93,21 +95,23 @@ function About() {
                 <li><strong style={{ color: '#BDAEFF' }}>Thinking & Teamwork:</strong> Learn to give and receive constructive critisism. You are an individual teamplayer</li>
                 <li><strong style={{ color: '#BDAEFF' }}>Strive for Optimal Outcomes:</strong> And be prepared for immediate compromises.</li>
                 <li><strong style={{ color: '#BDAEFF' }}>Answers Lay Everywhere:</strong> Observe. Think. Ask. Try</li>
+                <p><Rest onClick={openPhilosophyModal}> Read More...</Rest></p>
               </WorkPhilosophyList>
             </TextTwo>
           </Right>
-          <BottomRight />
+          <BottomRightTwo />
         </Box>
         <Box>
-          <LeftTwo onClick={openPassionModal}>
+          <LeftTwo>
             <TextTree>
               <h2>Passions and Interests</h2>
               <p>I love psychology, art and experiences. Brain teasers, projects and learning. No wonder I like to dive deep into everything new and learn!</p>
               <p>I tend to enjoy more than anything jumping into a project, let it be a simple puzzle or a wide full-stack project. As long as I have the opportunity to build something from the ground up and witness the entire creation taking shape out of nothing, I'm in my element. It's a process I love to repeat, over and over again. <strong style={{ color: '#FCD864' }}>★</strong></p>
+              <p><Rest onClick={openPassionModal}>Read More...</Rest></p>
             </TextTree>
             <ThumbnailTree src={require('../components/Resources/Digital/cave.jpg')} alt="Cave" />
           </LeftTwo>
-          <BottomLeft />
+          <BottomLeftTwo />
         </Box>
         {isIntroModalOpen && <IntroModal onClose={closeIntroModal} />}
         {isBackgroundModalOpen && <BackgroundModal onClose={closeBackgroundModal} />}
@@ -191,14 +195,6 @@ const Left = styled.div`
   max-height: 300px;
   overflow: visible;
 
-  &:hover {
-    cursor: pointer;
-
-    h2 {
-      color: #47358C;
-    }
-  }
-
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -215,14 +211,6 @@ align-items: flex-start;
 max-height: 300px;
 overflow: visible;
 
-&:hover {
-  cursor: pointer;
-
-  h2 {
-    color: #47358C;
-  }
-}
-
 @media (max-width: 768px) {
   flex-direction: column;
   align-items: center;
@@ -234,12 +222,44 @@ overflow: visible;
 
 const BottomLeft = styled(Bottom)`
   margin-right: 7%;
+
+  @media (max-width: 1050px) {
+    background-color: #47358C00;
+    box-shadow: 0 4px 2px -2px #FCD86400;
+  }
   
 `;
 
 const BottomRight = styled(Bottom)`
   margin-left: 7%;
+
+  @media (max-width: 1050px) {
+    background-color: #47358C00;
+    box-shadow: 0 4px 2px -2px #FCD86400;
+  }
 `;
+
+const BottomRightTwo = styled(Bottom)`
+  margin-top: 200px;
+  margin-left: 7%;
+
+  @media (max-width: 1150px) {
+    background-color: #47358C00;
+    box-shadow: 0 4px 2px -2px #FCD86400;
+  }
+`;
+
+const BottomLeftTwo = styled(Bottom)`
+  margin-top: 200px;
+  margin-right: 7%;
+
+  @media (max-width: 1150px) {
+    background-color: #47358C00;
+    box-shadow: 0 4px 2px -2px #FCD86400;
+  }
+`;
+
+
 
 const Right = styled.div`
   flex: 1;
@@ -248,14 +268,6 @@ const Right = styled.div`
   align-items: flex-start;
   max-height: 300px;
   justify-content: center;
-
-  &:hover {
-    cursor: pointer;
-
-    h2 {
-      color: #47358C;
-    }
-  }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
@@ -376,6 +388,16 @@ const Extra = styled.span`
   font-weight: 500;
 `;
 
+const Rest = styled.span`
+  color: #BDAEFF;
+  font-weight: 500;
+
+  &:hover {
+    color: #FCD864;
+    cursor: pointer;
+  }
+`;
+
 const Button = styled.a`
   margin-right: 20px;
   padding: 10px 20px;
@@ -401,6 +423,12 @@ const Button = styled.a`
     background-color: #FCD864;
     color: #47358C;
     text-decoration: none;
+  }
+
+  @media (max-width: 1050px) {
+    p {
+      font-size: 18px;
+    }
   }
 `;
 

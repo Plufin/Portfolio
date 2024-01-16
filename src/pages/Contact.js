@@ -16,7 +16,12 @@ function Contact() {
         </Header>
         <Text>
           <p>
-            Pellentesque tortor augue, euismod in hendrerit interdum, tempor non sem. Fusce varius ut mi ut tristique. Aliquam ac ornare metus. Sed odio purus, fringilla eget lorem vitae, convallis aliquet neque.
+            I would love to find a workplace, either for the summer or for an even longer period. My hope is to showcase my growing skills and passion to a company
+            that wants to give me an opportunity. I am also interested in engaging in product development projects, internships, and thesis work for them.
+          </p>
+          <p>I want to try and stay in the same company for a longer period of time, learning as much as possible.</p>
+          <p>
+            Wheter you have a project in mind, want to discuss job opportunities or just know more about me, feel free to reach out!
           </p>
         </Text>
         <Info>
@@ -94,7 +99,7 @@ padding-right: 40%;
 
 const Text = styled.div`
 padding-left: 15%;
-padding-right: 40%;
+padding-right: 30%;
   padding-top: 0px;
   display: flex;
   flex-direction: column;
