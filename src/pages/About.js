@@ -93,8 +93,8 @@ function About() {
                 <li><strong style={{ color: '#BDAEFF' }}>Execute or Delegate:</strong> I take pride in trust. So if I promise, I do</li>
                 <li><strong style={{ color: '#BDAEFF' }}>Enjoy Challenges:</strong> Challenges lay the groundwork for teaching others in the future. If you are willing to learn from them</li>
                 <li><strong style={{ color: '#BDAEFF' }}>Thinking & Teamwork:</strong> Learn to give and receive constructive critisism. You are an individual teamplayer</li>
-                <li><strong style={{ color: '#BDAEFF' }}>Strive for Optimal Outcomes:</strong> And be prepared for immediate compromises.</li>
-                <li><strong style={{ color: '#BDAEFF' }}>Answers Lay Everywhere:</strong> Observe. Think. Ask. Try</li>
+                <li><strong style={{ color: '#BDAEFF' }}>Strive for Optimal Outcomes:</strong> And be prepared for immediate compromises</li>
+                <li><strong style={{ color: '#BDAEFF' }}>Strategic Execution:</strong> Plan, Implement, Supervise, Monitor, Report.</li>
                 <p><Rest onClick={openPhilosophyModal}> Read More...</Rest></p>
               </WorkPhilosophyList>
             </TextTwo>

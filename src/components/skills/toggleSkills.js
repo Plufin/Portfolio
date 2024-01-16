@@ -80,14 +80,19 @@ const CodeContent = () => {
 
 const TeamworkContent = () => (
   <div>
-    <p style={{ marginBottom: '50px' }}>Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam. Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
-    <p><span style={{ color: '#FCD864' }}>Vice President</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
-    <p><span style={{ color: '#FCD864' }}>Freelancer</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
-    <p><span style={{ color: '#FCD864' }}>Customer Service</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
-    <p><span style={{ color: '#FCD864' }}>Peacekeeper</span> - Vestibulum id lacus eleifend urna pretium bibendum sollicitudin sit amet quam</p>
-    <p>suunnittele, toteuta, valvo, seuraa, raportoi</p>
+    <Team>
+      <p><span style={{ color: '#FCD864' }}>Vice President</span> - As a former board member of OSAKO and in my current supervisor role there, I have quickly acquired skills in time management, efficient communication, and taking on responsibilities. </p>
+      <p><span style={{ color: '#FCD864' }}>Freelancer</span> - I have learned creative expression, self-motivation, client collaboration and adaptability. Also seeing the end product from the customer's point of view has helped.</p>
+      <p><span style={{ color: '#FCD864' }}>Customer Service</span> - Working in sales, I had to develop active problem-solving skills and understanding of customers' needs. Patience, empathy, and maintaining a positive attitude in resolving issues are the key.</p>
+      <p><span style={{ color: '#FCD864' }}>Mediator</span> - As a trained mediator and objective conflict solver, I practiced active listening, finding common ground, and guiding parties towards mutually beneficial solutions. Rewarding I have to say.</p>
+    </Team>
   </div >
 );
+
+
+const Team = styled.div`
+
+  `;
 
 const Content = styled.div`
   display: flex;
@@ -113,11 +118,13 @@ const Container = styled.div`
   padding: 60px 60px 60px 60px;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     padding: 0px 20px 250px 20px;
     margin-left: 1%;
     margin-right: 1%;
     margin-top: 20px;
+    height: 100%;
+    max-height: 100%;
   }
   `;
 
@@ -147,10 +154,12 @@ const Button = styled(Link)`
   border-radius: 6px;
   text-decoration: none;
   color: #E2EFF2;
+  margin-top: 10px;
 
   &:hover {
     cursor: pointer;
-    background-color: #000;
+    background-color: #BDAEFF;
+    color: #18171C;
   }
 `;
 
@@ -197,7 +206,7 @@ const IconContainer = styled.div`
   }
 `;
 const Detail = styled.div`
-  padding-top: 40px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

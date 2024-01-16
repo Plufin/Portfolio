@@ -77,7 +77,7 @@ function Projects() {
           <Left onClick={openEsronietModal}>
             <Text>
               <Top>
-                <h2>Esroniet</h2>
+                <h2>Hurmos</h2>
               </Top>
               <p>Art :) </p>
             </Text>
