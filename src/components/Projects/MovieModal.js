@@ -9,20 +9,19 @@ const MovieModal = ({ onClose }) => {
       </Close>
       <TopicImage src={require('../Resources/Web/detailColor.png')} alt="Top" />
       <Header>
-        <h2>MovieApp Modal Is Under Construction.</h2>
-        <h2>Thank you for your patience!</h2>
+        <h1>MovieApp Modal Is Under Construction.</h1>
       </Header>
-      <Container>
-        <Text>
-          <p>Web application <a href="https://movieapp-976r.onrender.com/">(Open App)</a> that integrates React and Node.js, offering a wide selection of movies and series from an API,
-            a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series,
-            engage in discussions within groups, and explore content through news and reviews submitted by users.</p>
-        </Text>
-        <Images>
-          <Image src={require('../Resources/Web/Profile.png')} alt="Profile" />
-          <Image src={require('../Resources/Web/Profile.png')} alt="Profile" />
-        </Images>
-      </Container>
+      <Content>
+        <h2>Summary</h2>
+        <p>In shoert, what did I do</p>
+        <h2>Responsibilities</h2>
+        <p>What would be miserable without me?</p>
+        <p>List Art, List Physical</p>
+        <h2>Challenges</h2>
+        <p>What did I have to overcome?</p>
+        <h2>Outcomes</h2>
+        <p>What did I achieve?</p>
+      </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>
       </Close>
@@ -36,15 +35,6 @@ const Header = styled.div`
   align-items: flex-start;
   padding: 5px;
 `;
-
-const Container = styled.div`
-padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-`;
-
 
 const ModalWrapper = styled.div`
   width: 90%;
@@ -61,15 +51,21 @@ const ModalWrapper = styled.div`
   padding-bottom: 300px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   overflow: scroll;
 
   h2 {
-    padding-left: 20px;
+    border-bottom: 1px solid #FCD864;
+    min-width: 150px;
+    max-width: 350px;
     color: #FCD864;
     font-size: 30px;
   }
 `;
+
+const Content = styled.div`
+  padding: 20px;
+  `;
 
 const CloseButton = styled.button`
   background: transparent;
