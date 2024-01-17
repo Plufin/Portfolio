@@ -9,16 +9,32 @@ const EsronietModal = ({ onClose }) => {
       </Close>
       <TopicImage src={require('../Resources/Digital/knot.jpg')} alt="Knot" />
       <Content>
-        <h1>Esroniet's Modal Is Under Construction!</h1>
+        <h1>Hurmos</h1>
         <h2>Summary</h2>
-        <p>In shoert, what did I do</p>
+        <p>Hurmos is Oulu's second biggest festival and consists of two days. The daytime event is a collaboration between
+          businesses, student organizations, and university's guilds. There were over 100 partners,
+          each with a stand at the Oulu Linnanmaa campus. Students toured the stands and
+          enjoyed activities such as a photo wall, free drinks, a spray-painting wall, and
+          completed various tasks to earn an event badge. They could also pick up a wristband
+          for the evening event if they had bought one. This day was managed by the Linnanmaa team.</p>
+        <p>The evening event was a festival with three well-known artists performing at Oulu's
+          Kuusisaari. Some companies had the opportunity to sell their products, such as food,
+          drinks, and accessories. This event was managed by the Kuusisaari team.</p>
         <h2>Responsibilities</h2>
-        <p>What would be miserable without me?</p>
-        <p>List Art, List Physical</p>
+        <p>I was part of the Linnanmaa team, contributing to the planning of the day's schedule,
+          particularly outdoor activities like wristband exchange points, overall badge distribution,
+          and crowd control. Another primary role was serving as the graphic designer for the
+          entire Hurmos event. I designed color palettes, maps, signs, backgrounds for social media
+          posts, and signs for invitation-only events. I also designed overall badges, using negative space.</p>
         <h2>Challenges</h2>
-        <p>What did I have to overcome?</p>
+        <p>I simultaneously was Osako's board memeber with responsibilities, studied getting 4-5/5 grades, and communicated
+          actively with Hurmos members. This posed a real challenge to my time and stress
+          management, as well as finding time for rest (or a life for that matter). There were several >12-hour days, and without
+          effective teamwork, the event would not have been possible.</p>
+        <p>Oh, and I picked hundreds of 40kg concrete blocks. Thought about coding a lot at that point.</p>
         <h2>Outcomes</h2>
-        <p>What did I achieve?</p>
+        <p>I learned to work in teams, manage large-scale projects over an extended period, listen and provide
+          instructions. In short, I managed multitasking.</p>
       </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>

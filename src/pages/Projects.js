@@ -54,9 +54,9 @@ function Projects() {
                   <AiFillGithub />
                 </IconContainer>
               </Top>
-              <p>Web application <a href="https://movieapp-976r.onrender.com/news">(Open App)</a> that integrates React and Node.js, offering a wide selection of movies and series from an API,
+              <p>Web application that integrates React and Node.js, offering a wide selection of movies and series from an API,
                 a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series,
-                engage in discussions within groups, and explore content through news and reviews submitted by users. <Rest onClick={openMovieModal}> Learn More...</Rest></p>
+                engage in discussions within groups, and explore content through news and reviews submitted by users. <a href="https://movieapp-976r.onrender.com/news">(Open App)</a> or <Rest onClick={openMovieModal}> Learn More...</Rest></p>
             </Text>
             <Thumbnail src={require('../components/Resources/Web/phoneColor.png')} alt="PhoneColor" />
           </Left>
@@ -68,7 +68,9 @@ function Projects() {
               <Top>
                 <h2>Hurmos</h2>
               </Top>
-              <p>Nam quis sollicitudin risus. Morbi nec urna ac odio dictum suscipit sed a turpis. Curabitur cursus ante nec risus sollicitudin molestie. Fusce pharetra rutrum varius. In vitae neque a purus blandit tempus. Vestibulum maximus, augue a tempor pulvinar, sapien risus mattis diam, elementum auctor ipsum eros sed eros. <Rest onClick={openEsronietModal}> Learn More...</Rest> </p>
+              <p>Hurmos is a joint opening event that combines the OYY and OSAKO's own opening
+                events Vulcanalia and Prelud into a big two-day celebration of student culture for the entire Oulu higher
+                education community as part of the Oulu2026 Capital of Culture project. <Rest onClick={openEsronietModal}> What Did I Do...?</Rest> </p>
             </Text>
           </Right>
         </Box>
@@ -83,7 +85,7 @@ function Projects() {
               </Top>
               <p>This portfolio is one of my first works consentrating on frontend. I made myself a challenge to do this in a week,
                 designing and all. It took me 7 days to design a wireframe with various color palettes, gather images and make a filtering option.
-                I tried to consentrate on user friendliness and simple design for easy navigation. Hope you like it!  <Rest onClick={openPortfolioModal}> Learn More...</Rest></p>
+                I tried to consentrate on user friendliness and simple design for easy navigation. Hope you like it! {/* <Rest onClick={openPortfolioModal}> Learn More...</Rest>*/}</p>
             </Text>
             <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
           </Left>

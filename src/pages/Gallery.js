@@ -44,7 +44,7 @@ function Gallery() {
         </ToggleFiltersButton>
         {showFilters && (
           <Filter>
-            {['COMMISSION', 'DIGITAL', 'TRADITIONAL', 'WEB DESIGN', 'TATTOO'].map((filter) => (
+            {['COMMISSION', 'DIGITAL', 'TRADITIONAL', 'WEB', 'TATTOO'].map((filter) => (
               <h2
                 key={filter}
                 onClick={() => handleFilterClick(filter)}
@@ -95,7 +95,6 @@ const Filter = styled.div`
   flex: 1;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
 
@@ -111,6 +110,7 @@ const Filter = styled.div`
     padding: 10px;
     border: 2px solid transparent;
     transition: border 0.3s ease;
+    max-height: 25px;
     
 
     &:hover {
@@ -121,7 +121,6 @@ const Filter = styled.div`
       border-color: #BDAEFF;
     }
     @media (max-width: 768px) {
-
       font-size: 12px;
     }
   }

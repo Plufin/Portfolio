@@ -63,7 +63,7 @@ function About() {
                 University of Applied Sciences and dedicated to evolving as a <Extra>full-stack </Extra>
                 developer. I value user-friendliness,
                 aesthetics, and efficiency in applications and as a result, I enjoy exploring materials related to psychology and
-                UI/UX during my leisure time. <Rest onClick={openIntroModal}>Read More...</Rest></p>
+                UI/UX during my leisure time. {/*<Rest onClick={openIntroModal}>Read More...</Rest>*/} More at the bottom of the page!</p>
             </Text>
           </Right>
           <BottomRight />
@@ -95,7 +95,7 @@ function About() {
                 <li><strong style={{ color: '#BDAEFF' }}>Thinking & Teamwork:</strong> Learn to give and receive constructive critisism. You are an individual teamplayer</li>
                 <li><strong style={{ color: '#BDAEFF' }}>Strive for Optimal Outcomes:</strong> And be prepared for immediate compromises</li>
                 <li><strong style={{ color: '#BDAEFF' }}>Strategic Execution:</strong> Plan, Implement, Supervise, Monitor, Report.</li>
-                <p><Rest onClick={openPhilosophyModal}> Read More...</Rest></p>
+                { /*<p><Rest onClick={openPhilosophyModal}> Read More...</Rest></p>*/}
               </WorkPhilosophyList>
             </TextTwo>
           </Right>
