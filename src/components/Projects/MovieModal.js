@@ -17,7 +17,7 @@ const MovieModal = ({ onClose }) => {
         <p>This is a school project (15 credits), where each member of the group received a grade of 5/5.
           The group consisted of five contributors, each involved in various aspects to maximize learning,
           but mainly focusing on their designated responsibilities. In my case, I worked on the frontend and
-          oversaw the performance of others in that area. App runs, check it out <a href="https://movieapp-976r.onrender.com/news">here</a> or check the <a href="https://https://github.com/Plufin/MovieApp">GitHub</a>.</p>
+          oversaw the performance of others in that area. App runs, check it out <a href="https://movieapp-976r.onrender.com/">here</a> or check the <a href="https://github.com/Plufin/MovieApp">GitHub</a>.</p>
         <h2>Responsibilities</h2>
         <p>In the project, my primary responsibility was the frontend. However, I participated in all other aspects, as did all members of the group.</p>
         <p><Extra>Backend:</Extra> My responsibilities included creating endpoints, a database, and testing for individual user reviews of movies and TV series. This involved utilizing and filtering data from the TMDB API.</p>
@@ -26,6 +26,7 @@ const MovieModal = ({ onClose }) => {
         <li>Movies (TMDB). The homepage calls and displays popular movies and series.</li>
         <li>News (Finnkino, Oulu). The latest Finnkino news is presented on both the homepage and a separate News page.</li>
         <p><Extra>Frontend:</Extra> I practically took responsibility for everything you see on the site, and I may sound overly proud here. I AM proud of my first React project! I built the navbar and header, and I drew the whole wireframe, black/white and colored. I coded the foundation and global elements for all pages, which the group members then filled with their own components (of which I am proud). In the end, I went through all pages, refining or rebuilding them entirely based on responsiveness and user-friendliness. Things that I wanted to build but didn't know how, I learned.</p>
+        <Images>Image</Images>
         <p>Overall, I am proud of everyone's work. Other group members dedicated the time I spent on the frontend to ensure the backend, communication and maintenance. Without them them App would look nice but not be so functional</p>
         <h2>Challenges</h2>
         <p>The backend required learning and took a bit more time than I had hoped, but I managed to complete the tasks on time despite the challenges. To be honest, one of my main challenges was discovering a bit too late that the option in DevTools could be switched from the browser view to the mobile view. The app is responsive for a small window, but I could have checked it on the phone a little earlier. Live and learn :)</p>
@@ -51,7 +52,7 @@ const Header = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 90%;
+  width: 70%;
   height: 100%;
   flex: 1;
   flex-direction: column;
@@ -65,8 +66,12 @@ const ModalWrapper = styled.div`
   padding-bottom: 300px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   overflow: scroll;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
 
   h2 {
     border-bottom: 1px solid #FCD864;
@@ -80,9 +85,10 @@ const ModalWrapper = styled.div`
     color: #FCD864;
 
     &:hover {
-      color: #47358C;
-    
+      color: #47358C; 
   }
+
+
 `;
 
 const Content = styled.div`

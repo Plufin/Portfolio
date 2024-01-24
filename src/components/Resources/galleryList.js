@@ -85,7 +85,6 @@ const StyledImage = styled.div`
 
   &:hover {
     cursor: pointer;
-    opacity: 0.3;
   }
 
   &:hover::before {
@@ -98,12 +97,12 @@ const StyledImage = styled.div`
     padding: 20px;
     font-size: 20px;
     font-weight: bold;
-    color: #fff; /* Text color */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%); /* Adjust the dark color transparency */
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
     box-sizing: border-box;
     border-radius: 8px;
     text-align: center;
-    z-index: 100; /* Increase the z-index value */
+    z-index: 100;
   }
 `;
 
@@ -118,6 +117,7 @@ const MiniGallery = styled.div`
   flex: 1;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
 flex-wrap: wrap;
 align-items: flex-start;
