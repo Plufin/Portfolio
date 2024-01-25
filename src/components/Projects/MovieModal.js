@@ -8,7 +8,7 @@ const MovieModal = ({ onClose }) => {
       <Close>
         <CloseButton onClick={onClose}>X</CloseButton>
       </Close>
-      <TopicImage src={require('../Resources/Web/detailColor.png')} alt="Top" />
+      <TopicImage src={require('../Resources/Web/Top.png')} alt="Top" />
       <Header>
         <h1>Full Stack MovieApp</h1>
       </Header>
@@ -18,6 +18,10 @@ const MovieModal = ({ onClose }) => {
           The group consisted of five contributors, each involved in various aspects to maximize learning,
           but mainly focusing on their designated responsibilities. In my case, I worked on the frontend and
           oversaw the performance of others in that area. App runs, check it out <a href="https://movieapp-976r.onrender.com/">here</a> or check the <a href="https://github.com/Plufin/MovieApp">GitHub</a>.</p>
+        <ImageContainer>
+          <SummaryImage src={require('../Resources/Web/DetailColor.png')} alt="Deatail" />
+          <SummaryImage2 src={require('../Resources/Web/DetailPhone.png')} alt="Phone" />
+        </ImageContainer>
         <h2>Responsibilities</h2>
         <p>In the project, my primary responsibility was the frontend. However, I participated in all other aspects, as did all members of the group.</p>
         <p><Extra>Backend:</Extra> My responsibilities included creating endpoints, a database, and testing for individual user reviews of movies and TV series. This involved utilizing and filtering data from the TMDB API.</p>
@@ -26,7 +30,10 @@ const MovieModal = ({ onClose }) => {
         <li>Movies (TMDB). The homepage calls and displays popular movies and series.</li>
         <li>News (Finnkino, Oulu). The latest Finnkino news is presented on both the homepage and a separate News page.</li>
         <p><Extra>Frontend:</Extra> I practically took responsibility for everything you see on the site, and I may sound overly proud here. I AM proud of my first React project! I built the navbar and header, and I drew the whole wireframe, black/white and colored. I coded the foundation and global elements for all pages, which the group members then filled with their own components (of which I am proud). In the end, I went through all pages, refining or rebuilding them entirely based on responsiveness and user-friendliness. Things that I wanted to build but didn't know how, I learned.</p>
-        <Images>Image</Images>
+        <ImageContainer>
+          <SummaryImage src={require('../Resources/Web/Profile.png')} alt="Profile" />
+          <SummaryImage2 src={require('../Resources/Web/ProfileColorPhone.png')} alt="Phone" />
+        </ImageContainer>
         <p>Overall, I am proud of everyone's work. Other group members dedicated the time I spent on the frontend to ensure the backend, communication and maintenance. Without them them App would look nice but not be so functional</p>
         <h2>Challenges</h2>
         <p>The backend required learning and took a bit more time than I had hoped, but I managed to complete the tasks on time despite the challenges. To be honest, one of my main challenges was discovering a bit too late that the option in DevTools could be switched from the browser view to the mobile view. The app is responsive for a small window, but I could have checked it on the phone a little earlier. Live and learn :)</p>
@@ -52,7 +59,7 @@ const Header = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 70%;
+  width: 90%;
   height: 100%;
   flex: 1;
   flex-direction: column;
@@ -126,14 +133,48 @@ const Close = styled.div`
 
 const TopicImage = styled.img`
   width: 100%;
-  height: 30%;
   object-fit: cover;
 `;
 
-const Image = styled.img`
-  width: 40%;
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: center;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const SummaryImage = styled.img`
+width: 40%;
   object-fit: cover;
-  border-radius: 10px;
+  height: 100%;
+  padding: 2%;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
+`;
+
+const SummaryImage2 = styled.img`
+padding: 2%;
+width: 20%;
+height: 100%;
+  object-fit: cover;
+
+  @media (max-width: 1100px) {
+    width: 60%;
+  }
+`;
+
+const SummaryImageBottom = styled.img`
+width: 50%;
+  object-fit: cover;
+  padding: 2%;
 `;
 
 const Images = styled.div`
@@ -141,16 +182,6 @@ const Images = styled.div`
   flex-direction: row;
   justify-content: space-around;
   margin-top: 20px;
-`;
-
-const Text = styled.div`
-  padding-top: 0px;
-  font-size: 20px;
-  line-height: 1.5;
-  overflow: y-scroll;
-  background: #18171C90;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
 `;
 
 

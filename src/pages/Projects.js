@@ -56,9 +56,9 @@ function Projects() {
               </Top>
               <p>Web application that integrates React and Node.js, offering a wide selection of movies and series from an API,
                 a user-friendly interface, and efficient search functionality. The core idea is that users can leave various reviews for movies and series,
-                engage in discussions within groups, and explore content through news and reviews submitted by users. <a href="https://movieapp-976r.onrender.com/news">(Open App)</a> or <Rest onClick={openMovieModal}> Learn More...</Rest></p>
+                engage in discussions within groups, and explore content through news and reviews submitted by users. <a href="https://movieapp-976r.onrender.com/">(Open App)</a> or <Rest onClick={openMovieModal}> Learn More...</Rest></p>
             </Text>
-            <Thumbnail src={require('../components/Resources/Web/phoneColor.png')} alt="PhoneColor" />
+            <ThumbnailMovie src={require('../components/Resources/Web/phoneColor.png')} alt="PhoneColor" />
           </Left>
         </Box>
         <Box>
@@ -236,8 +236,24 @@ const Thumbnail = styled.img`
   width: 400px;
   object-fit: cover;
   border-radius: 10px;
+  
 
   @media (max-width: 768px) {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    border-bottom: 2px solid #FCD864;
+`;
+
+const ThumbnailMovie = styled.img`
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  object-position: top;
+
+  @media (max-width: 768px) {
+    object-position: center;
     width: 100%;
     object-fit: cover;
     border-radius: 0px;

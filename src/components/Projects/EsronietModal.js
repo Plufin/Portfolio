@@ -7,9 +7,8 @@ const EsronietModal = ({ onClose }) => {
       <Close>
         <CloseButton onClick={onClose}>X</CloseButton>
       </Close>
-      <TopicImage src={require('../Resources/Digital/knot.jpg')} alt="Knot" />
+      <TopicImage src={require('../Resources/Web/HurmosTop.png')} alt="HurmosTop" />
       <Content>
-        <h1>Hurmos</h1>
         <h2>Summary</h2>
         <p>Hurmos is Oulu's second biggest festival and consists of two days. The daytime event is a collaboration between
           businesses, student organizations, and university's guilds. There were over 100 partners,
@@ -26,6 +25,10 @@ const EsronietModal = ({ onClose }) => {
           and crowd control. Another primary role was serving as the graphic designer for the
           entire Hurmos event. I designed color palettes, maps, signs, backgrounds for social media
           posts, and signs for invitation-only events. I also designed overall badges, using negative space.</p>
+        <WideImage>
+          <TopicImage src={require('../Resources/Web/hurmosMerkit.png')} alt="HurmosBadge" />
+          <TopicImage src={require('../Resources/Web/AluekarttaEN.png')} alt="Alue" />
+        </WideImage>
         <h2>Challenges</h2>
         <p>I simultaneously was Osako's board memeber with responsibilities, studied getting 4-5/5 grades, and communicated
           actively with Hurmos members. This posed a real challenge to my time and stress
@@ -35,6 +38,9 @@ const EsronietModal = ({ onClose }) => {
         <h2>Outcomes</h2>
         <p>I learned to work in teams, manage large-scale projects over an extended period, listen and provide
           instructions. In short, I managed multitasking.</p>
+        <WideImage>
+          <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
+        </WideImage>
       </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>
@@ -106,10 +112,26 @@ const Close = styled.div`
 `;
 
 const TopicImage = styled.img`
-  width: 100%;
-  height: 30%;
+  width: 40%;
   object-fit: cover;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
 `;
+
+const WideImage = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+`;
+
 
 const Text = styled.div`
 padding-left: 20px;
