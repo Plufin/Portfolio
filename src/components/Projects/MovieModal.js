@@ -153,7 +153,6 @@ const SummaryImage = styled.img`
 width: 40%;
   object-fit: cover;
   height: 100%;
-  padding: 2%;
 
   @media (max-width: 1100px) {
     width: 100%;
@@ -161,7 +160,6 @@ width: 40%;
 `;
 
 const SummaryImage2 = styled.img`
-padding: 2%;
 width: 20%;
 height: 100%;
   object-fit: cover;

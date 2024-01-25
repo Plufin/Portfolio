@@ -12,6 +12,7 @@ function About() {
   const [isPhilosophyModalOpen, setIsPhilosophyModalOpen] = useState(false);
   const [isPassionModalOpen, setIsPassionModalOpen] = useState(false);
 
+
   const openIntroModal = () => {
     setIsIntroModalOpen(true);
   };
@@ -56,7 +57,7 @@ function About() {
       <Content>
         <Box>
           <Right>
-            <Thumbnail src={require('../components/Resources/Digital/hex.jpg')} alt="Hex" />
+            <ThumbnailProfile src={require('../components/Resources/Random/Profile.jpg')} alt="Hex" />
             <Text>
               <h2>Introduction</h2>
               <p>Hello! My name is Paula Ervasti and I am currently pursuing a degree in software engineering (2nd year) at Oulu
@@ -77,10 +78,11 @@ function About() {
                 currently as Vice Chairwoman, has strengthened my teamwork and leadership. <Rest onClick={openBackgroundModal}>Read More...</Rest>
               </p>
               <CV>
-                <Button href="https://www.linkedin.com/in/paula-ervasti-23b268258/"><p>Open CV</p></Button> <p>(And feel free to save it) :)</p>
+                <CvButton onClick={() => window.open(require('../components/Resources/Random/CV_PaulaErvasti.png'))}>CV</CvButton>
+                <p>(And feel free to save it) :)</p>
               </CV>
             </Text>
-            <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
+            <ThumbnailPeace src={require('../components/Resources/Digital/dragonPeace.png')} alt="Peace" />
           </Left>
           <BottomLeft />
         </Box>
@@ -293,6 +295,40 @@ const Thumbnail = styled.img`
   }
 `;
 
+const ThumbnailProfile = styled(Thumbnail)`
+margin: 20px;
+padding-top: 0px;
+width: 100%;
+max-width: 400px;
+min-width: 150px;
+
+@media (max-width: 768px) {
+  max-height: 300px;
+  min-width: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+  object-position: top;
+
+  border-bottom: 2px solid #FCD864;
+}
+`;
+
+const ThumbnailPeace = styled(Thumbnail)`
+height: 400px;
+width: 400px;
+object-fit: cover;
+border-radius: 10px;
+object-position: top;
+
+@media (max-width: 768px) {
+  object-position: center;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+  border-bottom: 2px solid #FCD864;
+}
+`;
+
 const ThumbnailTwo = styled(Thumbnail)`
   margin: 20px;
   padding-top: 0px;
@@ -398,15 +434,13 @@ const Rest = styled.span`
   }
 `;
 
-const Button = styled.a`
+const CvButton = styled.a`
   margin-right: 20px;
   padding: 10px 20px;
   border-radius: 8px;
-  background-color: #BDAEFF;
-  color: #241D4F;
+  background-color: #47358C;
   font-size: 20px;
-  transition: all 0.1s ease-in-out;
-  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 
   p {
     margin: 0px;

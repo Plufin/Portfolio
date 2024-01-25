@@ -63,7 +63,7 @@ function Projects() {
         </Box>
         <Box>
           <Right>
-            <Thumbnail src={require('../components/Resources/Digital/knot.jpg')} alt="Knot" />
+            <Thumbnail src={require('../components/Resources/Random/SaveTheDate1.png')} alt="Hurmos" />
             <Text>
               <Top>
                 <h2>Hurmos</h2>

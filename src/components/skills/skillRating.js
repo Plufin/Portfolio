@@ -26,7 +26,8 @@ const StarsContainer = styled.div`
 const Star = styled(FaStar)`
   color: ${(props) => (props.filled ? '#FCD864' : '#EEF1DC')};
   font-size: 20px;
-  margin-right: 2px; /* Add some spacing between stars */
+  margin-right: 2px;
+  margin-bottom: 20px;
 `;
 
 const SkillRating = ({ skill, rating }) => (

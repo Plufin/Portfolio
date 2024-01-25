@@ -58,16 +58,18 @@ const ArtContent = () => (
 
 const CodeContent = () => {
   const predeterminedRatings = {
-    Language1: 5,
-    Language2: 3,
-    Language3: 4,
-    Language4: 2,
+    React: 4,
+    JavaScript: 4,
+    HTML_CSS: 4,
+    CPlusPlus: 1,
+    NodeJS: 2,
+    MySQL: 2,
   };
 
   return (
     <div>
       <p style={{ marginBottom: '30px', alignSelf: 'flex-start', maxWidth: '700px' }}>
-        Since coding skills are subjective and ever-evolving, I've rated my skills based on my confidence ✨
+        Since coding skills are subjective and ever-evolving, I've rated my skills based on my confidence in both working with, and learning these technologies ✨
       </p>
       <RatingsContainer>
         {Object.entries(predeterminedRatings).map(([skill, rating]) => (
@@ -101,7 +103,7 @@ const Content = styled.div`
   align-items: center;
   padding: 20px 0px 20px 0px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     max-width: 100%;
     padding-left: 0px;
   }
@@ -118,7 +120,7 @@ const Container = styled.div`
   padding: 60px 60px 60px 60px;
   overflow: hidden;
 
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     padding: 0px 20px 250px 20px;
     margin-left: 1%;
     margin-right: 1%;
@@ -139,7 +141,7 @@ const ButtonContainer = styled.div`
   margin-top: ${({ center }) => (center ? '170px' : '0')};
   transition: margin-top 0.5s ease;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     padding-left: 0px;
     padding-right: 0px;
     align-items: center;
@@ -175,7 +177,7 @@ const ToggleButton = styled.button`
   cursor: pointer;
   padding: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     width: 48%;
   }
   
@@ -201,7 +203,7 @@ const IconContainer = styled.div`
   color: ${({ selected }) => (selected ? '#FCD864' : '#EEF1DC')};
   font-size: 50px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100pxs) {
     margin-top: 0px;
   }
 `;
@@ -212,7 +214,7 @@ const Detail = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     max-width: 100%;
     flex-wrap: wrap;
     
@@ -223,8 +225,10 @@ const RatingsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 700px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     justify-content: center;
     max-width: 100%;
     flex-wrap: wrap;
@@ -236,7 +240,7 @@ const Art = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     max-width: 100%;
     flex-wrap: wrap;
   }
