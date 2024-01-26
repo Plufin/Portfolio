@@ -19,8 +19,10 @@ const EsronietModal = ({ onClose }) => {
         <p>The evening event was a festival with three well-known artists performing at Oulu's
           Kuusisaari. Some companies had the opportunity to sell their products, such as food,
           drinks, and accessories. This event was managed by the Kuusisaari team.</p>
-        <TopicImage src={require('../Resources/Web/hurmosMerkit.png')} alt="HurmosBadge" />
-        <TopicImage src={require('../Resources/Web/AluekarttaEN.png')} alt="Alue" />
+        <Container>
+          <PatchesImage src={require('../Resources/Web/hurmosMerkit.png')} alt="HurmosBadge" />
+          <MapImage src={require('../Resources/Web/AluekarttaEN.png')} alt="Alue" />
+        </Container>
         <h2>Responsibilities</h2>
         <p>I was part of the Linnanmaa team, contributing to the planning of the day's schedule,
           particularly outdoor activities like wristband exchange points, overall badge distribution,
@@ -114,6 +116,23 @@ const TopicImage = styled.img`
   @media (max-width: 1100px) {
     width: 100%;
   }
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+const PatchesImage = styled.img`
+  width: 50%;
+  object-fit: cover;
+`;
+
+const MapImage = styled.img`
+  width: 50%;
+  object-fit: cover;
 `;
 
 const WideImage = styled.div`
