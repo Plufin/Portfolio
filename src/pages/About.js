@@ -77,10 +77,6 @@ function About() {
                 Roles as a Sales Representative and Freelance 2D Artist, I've learned communication, creativity, and attention to detail. Serving two years in the Student Union OSAKO,
                 currently as Vice Chairwoman, has strengthened my teamwork and leadership. <Rest onClick={openBackgroundModal}>Read More...</Rest>
               </p>
-              <CV>
-                <CvButton onClick={() => window.open(require('../components/Resources/Random/CV_PaulaErvasti.png'))}>CV</CvButton>
-                <p>(And feel free to save it) :)</p>
-              </CV>
             </Text>
             <ThumbnailPeace src={require('../components/Resources/Digital/dragonPeace.jpg')} alt="Peace" />
           </Left>
@@ -434,49 +430,6 @@ const Rest = styled.span`
   }
 `;
 
-const CvButton = styled.a`
-  margin-right: 20px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background-color: #47358C;
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
-
-  p {
-    margin: 0px;
-    font-weight: 500;
-    color: #241D4F;
-
-    &:hover {
-      color: #47358C;
-      text-decoration: none;
-    }
-  }
-
-  &:hover {
-    background-color: #FCD864;
-    color: #47358C;
-    text-decoration: none;
-  }
-
-  @media (max-width: 1050px) {
-    p {
-      font-size: 18px;
-    }
-  }
-`;
-
-const CV = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
 
 const WorkPhilosophyList = styled.ul`
 `;
