@@ -19,6 +19,8 @@ const EsronietModal = ({ onClose }) => {
         <p>The evening event was a festival with three well-known artists performing at Oulu's
           Kuusisaari. Some companies had the opportunity to sell their products, such as food,
           drinks, and accessories. This event was managed by the Kuusisaari team.</p>
+        <TopicImage src={require('../Resources/Web/hurmosMerkit.png')} alt="HurmosBadge" />
+        <TopicImage src={require('../Resources/Web/AluekarttaEN.png')} alt="Alue" />
         <h2>Responsibilities</h2>
         <p>I was part of the Linnanmaa team, contributing to the planning of the day's schedule,
           particularly outdoor activities like wristband exchange points, overall badge distribution,
@@ -34,9 +36,7 @@ const EsronietModal = ({ onClose }) => {
         <h2>Outcomes</h2>
         <p>I learned to work in teams, manage large-scale projects over an extended period, listen and provide
           instructions. In short, I managed multitasking.</p>
-        <WideImage>
-          <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
-        </WideImage>
+        <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
       </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>
