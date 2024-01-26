@@ -18,6 +18,10 @@ const MovieModal = ({ onClose }) => {
           The group consisted of five contributors, each involved in various aspects to maximize learning,
           but mainly focusing on their designated responsibilities. In my case, I worked on the frontend and
           oversaw the performance of others in that area. App runs, check it out <a href="https://movieapp-976r.onrender.com/">here</a> or check the <a href="https://github.com/Plufin/MovieApp">GitHub</a>.</p>
+        <ImageContainerr>
+          <SummaryImage src={require('../Resources/Web/DetailColor.png')} alt="Deatail" />
+          <SummaryImage2 src={require('../Resources/Web/DetailPhone.png')} alt="Phone" />
+        </ImageContainerr>
         <h2>Responsibilities</h2>
         <p>In the project, my primary responsibility was the frontend. However, I participated in all other aspects, as did all members of the group.</p>
         <p><Extra>Backend:</Extra> My responsibilities included creating endpoints, a database, and testing for individual user reviews of movies and TV series. This involved utilizing and filtering data from the TMDB API.</p>
@@ -133,6 +137,19 @@ const TopicImage = styled.img`
 `;
 
 const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: center;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const ImageContainerr = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
