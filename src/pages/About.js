@@ -82,7 +82,7 @@ function About() {
                 <p>(And feel free to save it) :)</p>
               </CV>
             </Text>
-            <ThumbnailPeace src={require('../components/Resources/Digital/dragonPeace.png')} alt="Peace" />
+            <ThumbnailPeace src={require('../components/Resources/Digital/dragonPeace.jpg')} alt="Peace" />
           </Left>
           <BottomLeft />
         </Box>
