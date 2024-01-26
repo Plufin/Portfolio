@@ -32,7 +32,7 @@ const EsronietModal = ({ onClose }) => {
         <h2>Challenges</h2>
         <p>I simultaneously was Osako's board memeber with responsibilities, studied getting 4-5/5 grades, and communicated
           actively with Hurmos members. This posed a real challenge to my time and stress
-          management, as well as finding time for rest (or a life for that matter). There were several >12-hour days, and without
+          management, as well as finding time for rest (or a life for that matter). There were several 12-hour days, and without
           effective teamwork, the event would not have been possible.</p>
         <p>Oh, and I picked hundreds of 40kg concrete blocks. Thought about coding a lot at that point.</p>
         <h2>Outcomes</h2>
@@ -130,17 +130,6 @@ const WideImage = styled.div`
   @media (max-width: 1100px) {
     flex-direction: column;
   }
-`;
-
-
-const Text = styled.div`
-padding-left: 20px;
-width: 90%;
-  padding-top: 0px;
-  color: #fff;
-  font-size: 20px;
-  line-height: 1.5;
-  overflow: y-scroll;
 `;
 
 
