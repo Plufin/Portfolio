@@ -25,10 +25,6 @@ const EsronietModal = ({ onClose }) => {
           and crowd control. Another primary role was serving as the graphic designer for the
           entire Hurmos event. I designed color palettes, maps, signs, backgrounds for social media
           posts, and signs for invitation-only events. I also designed overall badges, using negative space.</p>
-        <WideImage>
-          <TopicImage src={require('../Resources/Web/hurmosMerkit.png')} alt="HurmosBadge" />
-          <TopicImage src={require('../Resources/Web/AluekarttaEN.png')} alt="Alue" />
-        </WideImage>
         <h2>Challenges</h2>
         <p>I simultaneously was Osako's board memeber with responsibilities, studied getting 4-5/5 grades, and communicated
           actively with Hurmos members. This posed a real challenge to my time and stress
@@ -38,9 +34,6 @@ const EsronietModal = ({ onClose }) => {
         <h2>Outcomes</h2>
         <p>I learned to work in teams, manage large-scale projects over an extended period, listen and provide
           instructions. In short, I managed multitasking.</p>
-        <WideImage>
-          <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
-        </WideImage>
       </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>
