@@ -145,19 +145,6 @@ const ImageContainer = styled.div`
   }
 `;
 
-const ImageContainerr = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 20px;
-  align-items: center;
-
-  @media (max-width: 1100px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
 const SummaryImage = styled.img`
 width: 40%;
   object-fit: cover;

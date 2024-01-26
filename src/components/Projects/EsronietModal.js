@@ -34,6 +34,9 @@ const EsronietModal = ({ onClose }) => {
         <h2>Outcomes</h2>
         <p>I learned to work in teams, manage large-scale projects over an extended period, listen and provide
           instructions. In short, I managed multitasking.</p>
+        <WideImage>
+          <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
+        </WideImage>
       </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>
