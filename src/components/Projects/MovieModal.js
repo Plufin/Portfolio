@@ -18,10 +18,6 @@ const MovieModal = ({ onClose }) => {
           The group consisted of five contributors, each involved in various aspects to maximize learning,
           but mainly focusing on their designated responsibilities. In my case, I worked on the frontend and
           oversaw the performance of others in that area. App runs, check it out <a href="https://movieapp-976r.onrender.com/">here</a> or check the <a href="https://github.com/Plufin/MovieApp">GitHub</a>.</p>
-        <ImageContainer>
-          <SummaryImage src={require('../Resources/Web/DetailColor.png')} alt="Deatail" />
-          <SummaryImage2 src={require('../Resources/Web/DetailPhone.png')} alt="Phone" />
-        </ImageContainer>
         <h2>Responsibilities</h2>
         <p>In the project, my primary responsibility was the frontend. However, I participated in all other aspects, as did all members of the group.</p>
         <p><Extra>Backend:</Extra> My responsibilities included creating endpoints, a database, and testing for individual user reviews of movies and TV series. This involved utilizing and filtering data from the TMDB API.</p>
@@ -30,6 +26,10 @@ const MovieModal = ({ onClose }) => {
         <li>Movies (TMDB). The homepage calls and displays popular movies and series.</li>
         <li>News (Finnkino, Oulu). The latest Finnkino news is presented on both the homepage and a separate News page.</li>
         <p><Extra>Frontend:</Extra> I practically took responsibility for everything you see on the site, and I may sound overly proud here. I AM proud of my first React project! I built the navbar and header, and I drew the whole wireframe, black/white and colored. I coded the foundation and global elements for all pages, which the group members then filled with their own components (of which I am proud). In the end, I went through all pages, refining or rebuilding them entirely based on responsiveness and user-friendliness. Things that I wanted to build but didn't know how, I learned.</p>
+        <ImageContainer>
+          <SummaryImage src={require('../Resources/Web/Profile.png')} alt="Profile" />
+          <SummaryImage2 src={require('../Resources/Web/ProfileColorPhone.png')} alt="Phone" />
+        </ImageContainer>
         <p>Overall, I am proud of everyone's work. Other group members dedicated the time I spent on the frontend to ensure the backend, communication and maintenance. Without them them App would look nice but not be so functional</p>
         <h2>Challenges</h2>
         <p>The backend required learning and took a bit more time than I had hoped, but I managed to complete the tasks on time despite the challenges. To be honest, one of my main challenges was discovering a bit too late that the option in DevTools could be switched from the browser view to the mobile view. The app is responsive for a small window, but I could have checked it on the phone a little earlier. Live and learn :)</p>
