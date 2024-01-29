@@ -7,40 +7,39 @@ const EsronietModal = ({ onClose }) => {
       <Close>
         <CloseButton onClick={onClose}>X</CloseButton>
       </Close>
-      <TopicImage src={require('../Resources/Web/HurmosTop.png')} alt="HurmosTop" />
       <Content>
+        <h1>Esroniet Domain of Lost Unity</h1>
         <h2>Summary</h2>
-        <p>Hurmos is Oulu's second biggest festival and consists of two days. The daytime event is a collaboration between
-          businesses, student organizations, and university's guilds. There were over 100 partners,
-          each with a stand at the Oulu Linnanmaa campus. Students toured the stands and
-          enjoyed activities such as a photo wall, free drinks, a spray-painting wall, and
-          completed various tasks to earn an event badge. They could also pick up a wristband
-          for the evening event if they had bought one. This day was managed by the Linnanmaa team.</p>
-        <p>The evening event was a festival with three well-known artists performing at Oulu's
-          Kuusisaari. Some companies had the opportunity to sell their products, such as food,
-          drinks, and accessories. This event was managed by the Kuusisaari team.</p>
+        <Text>
+          <p>Esroniet: Domain of Lost Unity is a modding team focused on crafting a new realm within the TES:V Skyrim engine. My part began when I was
+            approached in ArtStation by an art director to volunteer as a concept artist. We worked through Trello
+            for design needs and Discord for communication.</p>
+        </Text>
         <Container>
-          <PatchesImage src={require('../Resources/Web/hurmosMerkit.png')} alt="HurmosBadge" />
-          <MapImage src={require('../Resources/Web/AluekarttaEN.png')} alt="Alue" />
+          <Gallery src={require('../Resources/Concept/conseptBird.jpg')} alt="Birds" />
         </Container>
         <h2>Responsibilities</h2>
-        <p>I was part of the Linnanmaa team, contributing to the planning of the day's schedule,
-          particularly outdoor activities like wristband exchange points, overall badge distribution,
-          and crowd control. Another primary role was serving as the graphic designer for the
-          entire Hurmos event. I designed color palettes, maps, signs, backgrounds for social media
-          posts, and signs for invitation-only events. I also designed overall badges, using negative space.</p>
-        <h2>Challenges</h2>
-        <p>I simultaneously was Osako's board memeber with responsibilities, studied getting 4-5/5 grades, and communicated
-          actively with Hurmos members. This posed a real challenge to my time and stress
-          management, as well as finding time for rest (or a life for that matter). There were several 12-hour days, and without
-          effective teamwork, the event would not have been possible.</p>
-        <p>Oh, and I picked hundreds of 40kg concrete blocks. Thought about coding a lot at that point.</p>
-        <h2>Outcomes</h2>
-        <p>I learned to work in teams, manage large-scale projects over an extended period, listen and provide
-          instructions. In short, I managed multitasking.</p>
+        <Text>
+          <p>Taking on the role of a concept artist, I created mockups of both vague and specific descriptions from Trello. Sometimes it was simple modification of cheetah's pattern, a whole new creature based on it's environment or from my own ideas like the bird designs up above.
+            The process involved sharing designs in our dedicated Discord channel, where feedback from art directors and other
+            designers reviewed each concept. This cycle continued until the designs reached completion. Trager (down below), the slothlike lizard was started with random sketches and was polished step by step.</p>
+        </Text>
         <Container>
-          <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
+          <Gallery src={require('../Resources/Concept/slothconsept.jpg')} alt="Trager Start" />
+          <Gallery src={require('../Resources/Concept/slothConsept5.jpg')} alt="Trager Body" />
+          <Gallery src={require('../Resources/Concept/slothConsept3.jpg')} alt="Trager Color" />
         </Container>
+        <h2>Outcome</h2>
+        <Text>
+          <p>I had never worked as a "real" concept artist so the pressure was on. I learned the team's communication dynamics and the criteria for
+            design reviews so work became less confusing after a while. Alongside practising my skills, I also learned to use Trello at some degree.
+            The overall experience was excellent and I got to feel like my art mattered.
+            However, due to personal projects and a full-time job, I had to step away from the project. Overall a 5/5
+            experience, would gladly repeat.</p>
+        </Text>
+        <ContainerBottom>
+          <GalleryBottom src={require('../Resources/Concept/Trager.png')} alt="Trager" />
+        </ContainerBottom>
       </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>
@@ -76,6 +75,10 @@ const ModalWrapper = styled.div`
     font-size: 30px;
   }
 `;
+
+const Text = styled.div`
+  max-width: 1500px;
+  `;
 
 const Content = styled.div`
   padding: 20px;
@@ -124,6 +127,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 
   @media (max-width: 1100px) {
@@ -133,23 +137,35 @@ const Container = styled.div`
   }
 `;
 
-const PatchesImage = styled.img`
-max-width: 40%;
-height: auto;
-
-@media (max-width: 1100px) {
-  max-width: 100%;
-  margin-bottom: 20px;
-`;
-
-const MapImage = styled.img`
-width: 30%;
-object-fit: cover;
+const ContainerBottom = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 
 @media (max-width: 1100px) {
   width: 100%;
+  align-items: center;
+  flex-direction: column;
 }
 `;
+
+
+const Gallery = styled.img`
+  width: 40%;
+  object-fit: cover;
+  margin: 10px;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
+`;
+
+const GalleryBottom = styled.img`
+  width: 100%;
+  object-fit: cover;
+  margin: 10px;
+  `;
 
 const WideImage = styled.div`
   width: 90%;

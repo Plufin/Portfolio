@@ -63,11 +63,7 @@ const GalleryList = ({ filterImages, openModal }) => (
     <Gallery src={require('../Resources/Concept/headpiece.jpg')} alt="Headpiece" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'headpiece.jpg'))} />
     <Gallery src={require('../Resources/Concept/snake.jpg')} alt="Snake" tags={['CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'snake.jpg'))} />
     <Gallery src={require('../Resources/Concept/crabConsept.jpg')} alt="Grass Crab" tags={['CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'crabConsept.jpg'))} />
-
-
     {/*WEB*/}
-
-
   </MiniGallery>
 );
 

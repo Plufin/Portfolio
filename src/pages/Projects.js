@@ -4,11 +4,13 @@ import styled from 'styled-components';
 import { AiFillGithub } from 'react-icons/ai';
 import MovieModal from '../components/Projects/MovieModal';
 import PortfolioModal from '../components/Projects/PortfolioModal';
+import HurmosModal from '../components/Projects/HurmosModal';
 import EsronietModal from '../components/Projects/EsronietModal';
 
 function Projects() {
   const [isMovieModalOpen, setIsMovieModalOpen] = useState(false);
   const [isPortfolioModalOpen, setIsPortfolioModalOpen] = useState(false);
+  const [isHurmosModalOpen, setIsHurmosModalOpen] = useState(false);
   const [isEsronietModalOpen, setIsEsronietModalOpen] = useState(false);
 
   const openMovieModal = () => {
@@ -26,6 +28,14 @@ function Projects() {
   const closePortfolioModal = () => {
     setIsPortfolioModalOpen(false);
   };
+
+  const openHurmosModal = () => {
+    setIsHurmosModalOpen(true);
+  }
+
+  const closeHurmosModal = () => {
+    setIsHurmosModalOpen(false);
+  }
 
   const openEsronietModal = () => {
     setIsEsronietModalOpen(true);
@@ -70,12 +80,25 @@ function Projects() {
               </Top>
               <p>Hurmos is a joint opening event that combines the OYY and OSAKO's own opening
                 events Vulcanalia and Prelud into a big two-day celebration of student culture for the entire Oulu higher
-                education community as part of the Oulu2026 Capital of Culture project. <Rest onClick={openEsronietModal}> What Did I Do...?</Rest> </p>
+                education community as part of the Oulu2026 Capital of Culture project. <Rest onClick={openHurmosModal}> What Did I Do...?</Rest> </p>
             </Text>
           </Right>
         </Box>
         <Box>
           <Left>
+            <Text>
+              <Top>
+                <h2>Esroniet Domain of Lost Unity</h2>
+              </Top>
+              <p>"Esroniet: Domain of Lost Unity is a modding team dedicated to creating a new land within the TES:V Skyrim engine." <a href="https://twitter.com/esronietu?lang=fi" target="_blank">-@EsronietU.</a> And I got invited to do concept art for them!
+                <Rest onClick={openEsronietModal}> See the Steps</Rest></p>
+            </Text>
+            <ThumbnailMovie src={require('../components/Resources/Concept/slothLizard.jpg')} alt="Trager" />
+          </Left>
+        </Box>
+        <Box>
+          <Right>
+            <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
             <Text>
               <Top>
                 <h2>This Portfolio</h2>
@@ -87,11 +110,11 @@ function Projects() {
                 designing and all. It took me 7 days to design a wireframe with various color palettes, gather images and make a filtering option.
                 I tried to consentrate on user friendliness and simple design for easy navigation. Hope you like it! {/* <Rest onClick={openPortfolioModal}> Learn More...</Rest>*/}</p>
             </Text>
-            <Thumbnail src={require('../components/Resources/Digital/fish.jpg')} alt="Fish" />
-          </Left>
+          </Right>
         </Box>
         {isMovieModalOpen && <MovieModal onClose={closeMovieModal} />}
         {isPortfolioModalOpen && <PortfolioModal onClose={closePortfolioModal} />}
+        {isHurmosModalOpen && <HurmosModal onClose={closeHurmosModal} />}
         {isEsronietModalOpen && <EsronietModal onClose={closeEsronietModal} />}
       </Content>
     </div>
@@ -259,6 +282,7 @@ const ThumbnailMovie = styled.img`
     border-radius: 0px;
     border-bottom: 2px solid #FCD864;
 `;
+
 
 const Text = styled.div`
   flex: 1;
