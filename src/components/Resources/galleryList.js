@@ -53,8 +53,17 @@ const GalleryList = ({ filterImages, openModal }) => (
     <Gallery src={require('../Resources/Sketch/creature.jpg')} alt="Rock" tags={['SKETCH']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Sketch', 'creature.jpg'))} />
     {/*CONSEPT*/}
     <Gallery src={require('../Resources/Concept/grass.jpg')} alt="Grass" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'grass.jpg'))} />
+    <Gallery src={require('../Resources/Concept/conseptBird.jpg')} alt="Birds" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'conseptBird.jpg'))} />
+    <Gallery src={require('../Resources/Concept/slothconsept.jpg')} alt="Trager Start" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'slothconsept.jpg'))} />
+    <Gallery src={require('../Resources/Concept/slothConsept5.jpg')} alt="Trager Body" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'slothConsept5.jpg'))} />
+    <Gallery src={require('../Resources/Concept/slothConsept3.jpg')} alt="Trager Color" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'slothConsept3.jpg'))} />
+    <Gallery src={require('../Resources/Concept/slothConsept2.jpg')} alt="Trager Turnaround" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'slothConsept2.jpg'))} />
+    <Gallery src={require('../Resources/Concept/slothLizard.jpg')} alt="Trager Detail" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'slothLizard.jpg'))} />
+    <Gallery src={require('../Resources/Concept/slothConsept4.jpg')} alt="Trager Habitat" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'slothConsept4.jpg'))} />
     <Gallery src={require('../Resources/Concept/headpiece.jpg')} alt="Headpiece" tags={['CONCEPT', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'headpiece.jpg'))} />
     <Gallery src={require('../Resources/Concept/snake.jpg')} alt="Snake" tags={['CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'snake.jpg'))} />
+    <Gallery src={require('../Resources/Concept/crabConsept.jpg')} alt="Grass Crab" tags={['CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Concept', 'crabConsept.jpg'))} />
+
 
     {/*WEB*/}
 

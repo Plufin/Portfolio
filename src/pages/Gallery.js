@@ -44,7 +44,7 @@ function Gallery() {
         </ToggleFiltersButton>
         {showFilters && (
           <Filter>
-            {['COMMISSION', 'DIGITAL', 'TRADITIONAL', 'TATTOO'].map((filter) => (
+            {['COMMISSION', 'DIGITAL', 'TRADITIONAL', 'TATTOO', 'CONCEPT'].map((filter) => (
               <h2
                 key={filter}
                 onClick={() => handleFilterClick(filter)}
@@ -122,7 +122,7 @@ const Filter = styled.div`
       border-color: #BDAEFF;
     }
     @media (max-width: 768px) {
-      font-size: 12px;
+      font-size: 15px;
     }
   }
 `;

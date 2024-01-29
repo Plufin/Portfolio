@@ -20,12 +20,13 @@ const ModalOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 `;
 
 const ModalContent = styled.div`
   flex: 1;
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.8);
-  max-height: 3000px;
+  max-height: 90%;
   max-width: 1000px;
   overflow: auto;
 `;
