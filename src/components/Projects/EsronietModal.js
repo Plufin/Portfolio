@@ -38,7 +38,9 @@ const EsronietModal = ({ onClose }) => {
         <h2>Outcomes</h2>
         <p>I learned to work in teams, manage large-scale projects over an extended period, listen and provide
           instructions. In short, I managed multitasking.</p>
-        <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
+        <Container>
+          <TopicImage src={require('../Resources/Web/kutsuvieras.png')} alt="Kutsuvieras" />
+        </Container>
       </Content>
       <Close>
         <CloseButtonBottom onClick={onClose}>CLOSE</CloseButtonBottom>
@@ -121,24 +123,32 @@ const TopicImage = styled.img`
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 const PatchesImage = styled.img`
-width: 40%;
-object-fit: cover;
+max-width: 40%;
+height: auto;
 
 @media (max-width: 1100px) {
-  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
 `;
 
 const MapImage = styled.img`
-width: 40%;
+width: 30%;
 object-fit: cover;
 
 @media (max-width: 1100px) {
   width: 100%;
+}
 `;
 
 const WideImage = styled.div`

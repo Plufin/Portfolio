@@ -180,7 +180,7 @@ const Box = styled.div`
 `;
 
 const Right = styled.div`
-margin-left: 20%;
+margin-left: 10%;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -206,10 +206,10 @@ margin-left: 20%;
 `;
 
 const Left = styled.div`
-margin-right: 20%;
+margin-right: 10%;
   flex: 1;
   display: flex;
-  flex-direction: row
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 30px;
@@ -218,16 +218,16 @@ margin-right: 20%;
 
   @media (max-width: 1300px) {
     background: transparent;
-    margin-right: 5%;
+    margin-left: 5%;
   }
-
 
   @media (max-width: 768px) {
     padding: 0px;
+    background: transparent;
     flex-direction: column;
     margin-left: 0px;
     margin-right: 0px;
-    background: transparent;
+    margin-bottom: 0px;
   }
 `;
 
@@ -267,6 +267,7 @@ const Text = styled.div`
   justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
+  max-width: 700px;
 
   h2 {
     font-size: 30px;
