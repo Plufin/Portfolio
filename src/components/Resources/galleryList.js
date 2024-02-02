@@ -40,9 +40,19 @@ const GalleryList = ({ filterImages, openModal }) => (
     <Gallery src={require('../Resources/Digital/Horse.jpg')} alt="Horse" tags={['DIGITAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Digital', 'Horse.jpg'))} />
 
     {/*TRADITIONAL*/}
+    <Gallery src={require('../Resources/Traditional/Timon.jpg')} alt="Meerkat" tags={['TRADITIONAL', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Timon.jpg'))} />
     <Gallery src={require('../Resources/Traditional/fox.jpg')} alt="Fox" tags={['TRADITIONAL', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'fox.jpg'))} />
-    <Gallery src={require('../Resources/Traditional/Lost.jpg')} alt="Lost" tags={['TRADITIONAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Lost.jpg'))} />
     <Gallery src={require('../Resources/Traditional/manedWolf.jpg')} alt="Maned Wolf" tags={['TRADITIONAL', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'manedWolf.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/Swim.jpg')} alt="Swim" tags={['TRADITIONAL', 'CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Swim.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/Goat.jpg')} alt="Goat" tags={['TRADITIONAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Goat.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/Moss.jpg')} alt="Moss" tags={['TRADITIONAL', 'CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Moss.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/WaterPhoenix.jpg')} alt="Watercolor" tags={['TRADITIONAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'WaterPhoenix.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/Rest.jpg')} alt="Rest" tags={['TRADITIONAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Rest.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/Lost.jpg')} alt="Lost" tags={['TRADITIONAL']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Lost.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/Nuut.jpg')} alt="Fox" tags={['TRADITIONAL', 'CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'Nuut.jpg'))} />
+    <Gallery src={require('../Resources/Traditional/waterColor.jpg')} alt="Warm" tags={['TRADITIONAL', 'CONCEPT']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Traditional', 'waterColor.jpg'))} />
+
+
     {/*TATTOO*/}
     <Gallery src={require('../Resources/Tattoo/element2.jpg')} alt="Elements2" tags={['TATTOO', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Tattoo', 'element2.jpg'))} />
     <Gallery src={require('../Resources/Tattoo/backTattoo.jpg')} alt="Back" tags={['TATTOO', 'COMMISSION']} filterImages={filterImages} openModal={() => openModal(getImageInfo('Tattoo', 'backTattoo.jpg'))} />
