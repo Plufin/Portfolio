@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-import SkillRating from './skillRating';
-import ArtList from './artList';
-import { RiTeamLine } from 'react-icons/ri';
-import { BsBrush } from 'react-icons/bs';
-import { FaCode } from 'react-icons/fa';
+import SkillRating from "./skillRating";
+import ArtList from "./artList";
+import { RiTeamLine } from "react-icons/ri";
+import { BsBrush } from "react-icons/bs";
+import { FaCode } from "react-icons/fa";
 
 const ToggleSkills = () => {
   const [selectedSection, setSelectedSection] = useState(null);
@@ -19,29 +19,40 @@ const ToggleSkills = () => {
     <Container>
       <Content>
         <ButtonContainer center={!selectedSection}>
-          <ToggleButton onClick={() => handleToggle('art')} selected={selectedSection === 'art'}>
-            <p className={selectedSection === 'art' ? 'selected' : ''}>ART</p>
-            <IconContainer selected={selectedSection === 'art'}>
+          <ToggleButton
+            onClick={() => handleToggle("art")}
+            selected={selectedSection === "art"}
+          >
+            <p className={selectedSection === "art" ? "selected" : ""}>ART</p>
+            <IconContainer selected={selectedSection === "art"}>
               <BsBrush />
             </IconContainer>
           </ToggleButton>
-          <ToggleButton onClick={() => handleToggle('code')} selected={selectedSection === 'code'}>
-            <p className={selectedSection === 'code' ? 'selected' : ''}>CODE</p>
-            <IconContainer selected={selectedSection === 'code'}>
+          <ToggleButton
+            onClick={() => handleToggle("code")}
+            selected={selectedSection === "code"}
+          >
+            <p className={selectedSection === "code" ? "selected" : ""}>CODE</p>
+            <IconContainer selected={selectedSection === "code"}>
               <FaCode />
             </IconContainer>
           </ToggleButton>
-          <ToggleButton onClick={() => handleToggle('teamwork')} selected={selectedSection === 'teamwork'}>
-            <p className={selectedSection === 'teamwork' ? 'selected' : ''}>TEAM</p>
-            <IconContainer selected={selectedSection === 'teamwork'}>
+          <ToggleButton
+            onClick={() => handleToggle("teamwork")}
+            selected={selectedSection === "teamwork"}
+          >
+            <p className={selectedSection === "teamwork" ? "selected" : ""}>
+              TEAM
+            </p>
+            <IconContainer selected={selectedSection === "teamwork"}>
               <RiTeamLine />
             </IconContainer>
           </ToggleButton>
         </ButtonContainer>
         <Detail>
-          {selectedSection === 'art' && <ArtContent />}
-          {selectedSection === 'code' && <CodeContent />}
-          {selectedSection === 'teamwork' && <TeamworkContent />}
+          {selectedSection === "art" && <ArtContent />}
+          {selectedSection === "code" && <CodeContent />}
+          {selectedSection === "teamwork" && <TeamworkContent />}
         </Detail>
       </Content>
     </Container>
@@ -50,7 +61,9 @@ const ToggleSkills = () => {
 
 const ArtContent = () => (
   <Art>
-    <p style={{ marginBottom: '50px', alignSelf: 'flex-start' }}>Let the Work Speak For Itself ~</p>
+    <p style={{ marginBottom: "50px", alignSelf: "flex-start" }}>
+      Let the Work Speak For Itself ~
+    </p>
     <ArtList />
     <Button to="/gallery">SEE ALL</Button>
   </Art>
@@ -61,6 +74,8 @@ const CodeContent = () => {
     React: 4,
     JavaScript: 4,
     HTML_CSS: 4,
+    Python: 3,
+    Kotlin: 3,
     CPlusPlus: 1,
     NodeJS: 2,
     MySQL: 2,
@@ -68,8 +83,16 @@ const CodeContent = () => {
 
   return (
     <div>
-      <p style={{ marginBottom: '30px', alignSelf: 'flex-start', maxWidth: '700px' }}>
-        Since coding skills are subjective and ever-evolving, I've rated my skills based on my confidence in both working with, and learning these technologies ✨
+      <p
+        style={{
+          marginBottom: "30px",
+          alignSelf: "flex-start",
+          maxWidth: "700px",
+        }}
+      >
+        Since coding skills are subjective and ever-evolving, I've rated my
+        skills based on my confidence in both working with, and learning these
+        technologies ✨
       </p>
       <RatingsContainer>
         {Object.entries(predeterminedRatings).map(([skill, rating]) => (
@@ -83,18 +106,35 @@ const CodeContent = () => {
 const TeamworkContent = () => (
   <div>
     <Team>
-      <p><span style={{ color: '#FCD864' }}>Vice President</span> - As a former board member of OSAKO and in my current supervisor role there, I have quickly acquired skills in time management, efficient communication, and taking on responsibilities. </p>
-      <p><span style={{ color: '#FCD864' }}>Freelancer</span> - I have learned creative expression, self-motivation, client collaboration and adaptability. Also seeing the end product from the customer's point of view has helped.</p>
-      <p><span style={{ color: '#FCD864' }}>Customer Service</span> - Working in sales, I had to develop active problem-solving skills and understanding of customers' needs. Patience, empathy, and maintaining a positive attitude in resolving issues are the key.</p>
-      <p><span style={{ color: '#FCD864' }}>Mediator</span> - As a trained mediator and objective conflict solver, I practiced active listening, finding common ground, and guiding parties towards mutually beneficial solutions. Rewarding I have to say.</p>
+      <p>
+        <span style={{ color: "#FCD864" }}>Vice President</span> - As a former
+        board member of OSAKO and in my current supervisor role there, I have
+        quickly acquired skills in time management, efficient communication, and
+        taking on responsibilities.{" "}
+      </p>
+      <p>
+        <span style={{ color: "#FCD864" }}>Freelancer</span> - I have learned
+        creative expression, self-motivation, client collaboration and
+        adaptability. Also seeing the end product from the customer's point of
+        view has helped.
+      </p>
+      <p>
+        <span style={{ color: "#FCD864" }}>Customer Service</span> - Working in
+        sales, I had to develop active problem-solving skills and understanding
+        of customers' needs. Patience, empathy, and maintaining a positive
+        attitude in resolving issues are the key.
+      </p>
+      <p>
+        <span style={{ color: "#FCD864" }}>Mediator</span> - As a trained
+        mediator and objective conflict solver, I practiced active listening,
+        finding common ground, and guiding parties towards mutually beneficial
+        solutions. Rewarding I have to say.
+      </p>
     </Team>
-  </div >
+  </div>
 );
 
-
-const Team = styled.div`
-
-  `;
+const Team = styled.div``;
 
 const Content = styled.div`
   display: flex;
@@ -128,17 +168,17 @@ const Container = styled.div`
     height: 100%;
     max-height: 100%;
   }
-  `;
+`;
 
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 80%;
   padding-left: 30px;
   padding-right: 30px;
-  margin-top: ${({ center }) => (center ? '170px' : '0')};
+  margin-top: ${({ center }) => (center ? "170px" : "0")};
   transition: margin-top 0.5s ease;
 
   @media (max-width: 1100px) {
@@ -152,19 +192,18 @@ const ButtonContainer = styled.div`
 
 const Button = styled(Link)`
   padding: 10px 20px 10px 20px;
-  background-color: #47358C;
+  background-color: #47358c;
   border-radius: 6px;
   text-decoration: none;
-  color: #E2EFF2;
+  color: #e2eff2;
   margin-top: 10px;
 
   &:hover {
     cursor: pointer;
-    background-color: #BDAEFF;
-    color: #18171C;
+    background-color: #bdaeff;
+    color: #18171c;
   }
 `;
-
 
 const ToggleButton = styled.button`
   display: flex;
@@ -187,7 +226,7 @@ const ToggleButton = styled.button`
   }
 
   p {
-    color: ${({ selected }) => (selected ? '#FCD864' : '#E2EFF2')};
+    color: ${({ selected }) => (selected ? "#FCD864" : "#E2EFF2")};
     transition: color 0.3s ease-in-out;
   }
 
@@ -200,7 +239,7 @@ const ToggleButton = styled.button`
 const IconContainer = styled.div`
   width: 100px;
   margin-top: 8px;
-  color: ${({ selected }) => (selected ? '#FCD864' : '#EEF1DC')};
+  color: ${({ selected }) => (selected ? "#FCD864" : "#EEF1DC")};
   font-size: 50px;
 
   @media (max-width: 1100pxs) {
@@ -217,7 +256,6 @@ const Detail = styled.div`
   @media (max-width: 1100px) {
     max-width: 100%;
     flex-wrap: wrap;
-    
   }
 `;
 
