@@ -76,9 +76,9 @@ const CodeContent = () => {
     HTML_CSS: 4,
     Python: 3,
     Kotlin: 3,
-    CPlusPlus: 1,
-    NodeJS: 2,
-    MySQL: 2,
+    CPlusPlus: 2,
+    NodeJS: 3,
+    MySQL: 3,
   };
 
   return (
